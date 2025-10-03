@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVAPS & Company</title>
+    <title>MVAPS & Company - Software Development Solutions</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="MVAPS & Company is a premier software development agency in Nagpur, creating powerful solutions in problem-solving, entertainment, and educational technology.">
+    <meta name="keywords" content="MVAPS, software development, web development, app development, Nagpur, custom software, problem-solving, educational technology">
     
-    <!-- Google Fonts - Inter -->
+    <!-- Google Fonts - Playfair Display & Lato -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +29,8 @@
                         surface: '#1B263B',   // Dark Slate Blue (for text and surfaces)
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        'sans': ['Lato', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
                     },
                 }
             }
@@ -39,8 +44,11 @@
         html {
             scroll-behavior: smooth;
         }
-        body {
-            font-family: 'Inter', sans-serif;
+        .font-serif {
+             font-family: 'Playfair Display', serif;
+        }
+        .font-sans {
+             font-family: 'Lato', sans-serif;
         }
         .backdrop-blur-custom {
             backdrop-filter: blur(8px);
@@ -65,19 +73,18 @@
     <header class="fixed w-full z-50 transition-all duration-300 bg-light/80 backdrop-blur-custom border-b border-gray-200/50">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-dark flex items-center space-x-2">
-                 <!-- Main MVAPS Logo -->
                  <img src="https://i.postimg.cc/RZYgxbY3/Screenshot-2025-09-27-114254.png" alt="MVAPS Logo" class="h-10 w-10">
-                <span>MVAPS & <span class="text-primary">Company</span></span>
+                <span class="font-serif">MVAPS & <span class="text-primary">Company</span></span>
             </a>
-            <div class="hidden md:flex space-x-8 text-dark">
-                <a href="#home" class="hover:text-primary transition-colors duration-300">Home</a>
-                <a href="#about" class="hover:text-primary transition-colors duration-300">About</a>
-                <a href="#services" class="hover:text-primary transition-colors duration-300">Services</a>
-                <a href="#products" class="hover:text-primary transition-colors duration-300">Products</a>
-                <a href="#team" class="hover:text-primary transition-colors duration-300">Team</a>
-                <a href="#contact" class="hover:text-primary transition-colors duration-300">Contact</a>
+            <div id="nav-menu" class="hidden md:flex md:items-center md:space-x-8 text-dark absolute md:static bg-light md:bg-transparent w-full md:w-auto left-0 top-full p-4 md:p-0">
+                <a href="#home" class="block py-2 md:py-0 hover:text-primary transition-colors duration-300">Home</a>
+                <a href="#about" class="block py-2 md:py-0 hover:text-primary transition-colors duration-300">About</a>
+                <a href="#services" class="block py-2 md:py-0 hover:text-primary transition-colors duration-300">Services</a>
+                <a href="#products" class="block py-2 md:py-0 hover:text-primary transition-colors duration-300">Products</a>
+                <a href="#team" class="block py-2 md:py-0 hover:text-primary transition-colors duration-300">Team</a>
+                <a href="#contact" class="block py-2 md:py-0 hover:text-primary transition-colors duration-300">Contact</a>
             </div>
-            <button class="md:hidden text-dark">
+            <button id="mobile-menu-button" class="md:hidden text-dark">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -88,7 +95,7 @@
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-20 pb-10 px-4 bg-dark">
         <div class="container mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-light" data-aos="fade-up" data-aos-duration="1000">MVAPS & Company</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-light font-serif" data-aos="fade-up" data-aos-duration="1000">MVAPS & Company</h1>
             <p class="text-xl md:text-2xl text-secondary mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 Making Visions Achievable with Powerful Solutions.
             </p>
@@ -102,7 +109,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-4">
         <div class="container mx-auto max-w-4xl" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-dark">About Us</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-dark font-serif">About Us</h2>
             <p class="text-lg md:text-xl leading-relaxed text-center text-surface">
                 Founded in Nagpur on May 20, 2024, MVAPS & Company is a software development agency dedicated to excellence and innovation. 
                 We specialize in creating powerful solutions that transform visions into reality, delivering cutting-edge technology 
@@ -114,7 +121,7 @@
     <!-- Services Section -->
     <section id="services" class="py-20 px-4 bg-dark">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-light" data-aos="fade-up">Our Services</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-light font-serif" data-aos="fade-up">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Service 1 -->
                 <div class="bg-surface p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
@@ -169,12 +176,11 @@
     <!-- Our Products Section -->
     <section id="products" class="py-20 px-4">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-dark" data-aos="fade-up">Our Flagship Products</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-dark font-serif" data-aos="fade-up">Our Flagship Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Product 1: SnapDocs AI -->
                 <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-gray-200" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-20 mb-4 flex items-center justify-center">
-                        <!-- SnapDocs AI Logo -->
                         <img src="https://i.postimg.cc/mZMfX7tV/Screenshot-2025-09-22-205658.png" alt="SnapDocs AI Logo" class="max-h-16 object-contain">
                     </div>
                     <p class="text-surface flex-grow mb-6 text-center">Convert photos to PDFs, transform image formats, and scan documents effortlessly with our AI-powered app.</p>
@@ -189,7 +195,6 @@
                 <!-- Product 2: Solveitly.com -->
                 <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-gray-200" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-20 mb-4 flex items-center justify-center">
-                        <!-- Solveitly Logo -->
                         <img src="https://i.postimg.cc/SKw1Ct7b/Screenshot-2025-09-13-102359.png" alt="Solveitly.com Logo" class="max-h-16 object-contain">
                     </div>
                     <p class="text-surface flex-grow mb-6 text-center">Your ultimate destination for educational content and comprehensive answers. Empowering learners of all ages.</p>
@@ -204,10 +209,23 @@
                 <!-- Product 3: Astral Creation -->
                 <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-gray-200" data-aos="fade-up" data-aos-delay="300">
                      <div class="h-20 mb-4 flex items-center justify-center">
-                        <!-- Astral Creation Logo -->
                         <img src="https://i.postimg.cc/Wp7S14yx/Whats-App-Image-2025-09-21-at-20-09-18-5bb937c9.jpg" alt="Astral Creation Logo" class="max-h-16 object-contain">
                     </div>
                     <p class="text-surface flex-grow mb-6 text-center">Where imagination turns into reality! We create impactful stories through creative branding and engaging campaigns.</p>
+                    <div class="relative mt-auto">
+                        <button class="bg-gray-200 text-gray-500 font-medium py-3 px-8 rounded-lg w-full cursor-not-allowed">
+                            Try It
+                        </button>
+                        <span class="absolute top-0 right-0 -mt-2 -mr-2 bg-secondary text-light text-xs font-bold px-2 py-1 rounded-full animate-blink">Coming Soon</span>
+                    </div>
+                </div>
+                
+                <!-- Product 4: Infos digital -->
+                <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-gray-200" data-aos="fade-up" data-aos-delay="400">
+                     <div class="h-20 mb-4 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/7ZZCZv96/Screenshot-2025-10-03-214038.png" alt="Infos digital Logo" class="max-h-16 object-contain">
+                    </div>
+                    <p class="text-surface flex-grow mb-6 text-center">Your one-stop destination for a thrilling blend of news and entertainment through captivating shorts and videos.</p>
                     <div class="relative mt-auto">
                         <button class="bg-gray-200 text-gray-500 font-medium py-3 px-8 rounded-lg w-full cursor-not-allowed">
                             Try It
@@ -222,13 +240,12 @@
     <!-- Team Section -->
     <section id="team" class="py-20 px-4 bg-dark">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-light" data-aos="fade-up">Our Team</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-light font-serif" data-aos="fade-up">Our Team</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Team Member 1: Azad Bhasme -->
                 <div class="bg-surface p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10">
-                        <!-- Azad's Photo -->
                         <img src="https://i.postimg.cc/FKR13TF0/Screenshot-2025-10-02-221211.png" alt="Azad Bhasme" class="rounded-full w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-light">Azad Bhasme</h3>
@@ -239,7 +256,6 @@
                 <!-- Team Member 2: Abhishek Giri -->
                 <div class="bg-surface p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10">
-                         <!-- Abhishek's Photo -->
                          <img src="https://i.postimg.cc/j5bQsV4P/Screenshot-2025-10-02-214652.png" alt="Abhishek Giri" class="rounded-full w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-light">Abhishek Giri</h3>
@@ -250,7 +266,6 @@
                 <!-- Team Member 3: Piyush Kurzekar -->
                 <div class="bg-surface p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10">
-                        <!-- Piyush's Photo -->
                         <img src="https://i.postimg.cc/SKWC1Tb9/Screenshot-2025-10-02-214828.png" alt="Piyush Kurzekar" class="rounded-full w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-light">Piyush Kurzekar</h3>
@@ -265,7 +280,7 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-4">
         <div class="container mx-auto max-w-2xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-dark" data-aos="fade-up">Get In Touch</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-dark font-serif" data-aos="fade-up">Get In Touch</h2>
             <form class="space-y-6">
                 <div data-aos="fade-left" data-aos-delay="100">
                     <label for="name" class="block mb-2 font-medium text-surface">Name</label>
@@ -330,6 +345,13 @@
                 offset: 50
             });
             
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navMenu = document.getElementById('nav-menu');
+            mobileMenuButton.addEventListener('click', function() {
+                navMenu.classList.toggle('hidden');
+            });
+
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -339,6 +361,11 @@
                     
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
+                        // Close mobile menu if open
+                        if (!navMenu.classList.contains('hidden')) {
+                            navMenu.classList.add('hidden');
+                        }
+                        
                         window.scrollTo({
                             top: targetElement.offsetTop - 80, // Offset for fixed header
                             behavior: 'smooth'
@@ -360,6 +387,4 @@
     </script>
 </body>
 </html>
-
-
 
