@@ -176,24 +176,34 @@
         </div>
     </section>
 
-    <!-- Our Products Section -->
-    <section id="products" class="py-20 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-dark font-serif" data-aos="fade-up">Our Flagship Products</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Product 1: SnapDocs AI -->
-                <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-gray-200" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-20 mb-4 flex items-center justify-center">
-                        <img src="https://i.postimg.cc/mZMfX7tV/Screenshot-2025-09-22-205658.png" alt="SnapDocs AI Logo" class="max-h-16 object-contain">
-                    </div>
-                    <p class="text-surface flex-grow mb-6 text-center">Convert photos to PDFs, transform image formats, and scan documents effortlessly with our AI-powered app.</p>
-                    <div class="relative mt-auto">
-                        <button class="bg-gray-200 text-gray-500 font-medium py-3 px-8 rounded-lg w-full cursor-not-allowed">
-                            Try It
-                        </button>
-                        <span class="absolute top-0 right-0 -mt-2 -mr-2 bg-secondary text-light text-xs font-bold px-2 py-1 rounded-full animate-blink">Coming Soon</span>
-                    </div>
-                </div>
+    <!-- Product 1: SnapDocs AI -->
+<div class="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+    <div class="h-20 mb-4 flex items-center justify-center">
+        <img src="https://i.postimg.cc/mZMfX7tV/Screenshot-2025-09-22-205658.png" alt="SnapDocs AI Logo" class="max-h-16 object-contain">
+    </div>
+    <p class="text-surface flex-grow mb-6 text-center">
+        Convert photos to PDFs, transform image formats, and scan documents effortlessly with our AI-powered app.
+    </p>
+    <div class="relative mt-auto">
+        <a href="https://snapdocsaio.onrender.com" target="_blank" rel="noopener noreferrer"
+           class="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 text-white font-semibold py-3 px-8 rounded-lg w-full text-center block transition-all duration-300 hover:scale-105 hover:shadow-lg animate-shine">
+            Try It 🚀
+        </a>
+    </div>
+</div>
+
+<!-- Add this CSS in your <style> block or global stylesheet -->
+<style>
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.animate-shine {
+  background-size: 200% auto;
+  animation: shine 2s linear infinite;
+}
+</style>
+
 
                 <!-- Product 2: Solveitly.com -->
                 <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-gray-200" data-aos="fade-up" data-aos-delay="200">
@@ -243,7 +253,7 @@
     <!-- Team Section -->
     <section id="team" class="py-20 px-4 bg-dark">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-light font-serif" data-aos="fade-up">Meet The Founder's</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-light font-serif" data-aos="fade-up">Meet Our Founder's</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Team Member 1: Azad Bhasme -->
