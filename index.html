@@ -3,49 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PROJECTNEST | Turning Your Ideas Into Reality With Technology</title>
+  <title>MVAPS &amp; Company | Making Visions Achievable with Powerful Solutions</title>
   <meta
     name="description"
-    content="From academic projects to advanced AI solutions, agentic AI workflows, websites, applications, and business automation — Project Nest helps you transform your vision into powerful digital solutions."
+    content="MVAPS & Company is a connected business and technology ecosystem uniting MVAPS Solutions (IT & AI), Solveitly (EdTech), and Infos Digital (Media)."
   />
 
  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
   <style>
     :root {
-      --bg-dark: #060b16;
-      --bg-dark-secondary: #0b1325;
-      --bg-card-dark: rgba(15, 25, 48, 0.78);
-      --bg-light: #f8fafc;
-      --bg-light-alt: #f1f5f9;
-      --bg-white: #ffffff;
-      --cyan-400: #22d3ee;
-      --cyan-500: #06b6d4;
-      --blue-500: #3b82f6;
-      --blue-600: #2563eb;
-      --indigo-500: #6366f1;
-      --emerald-400: #34d399;
-      --amber-400: #fbbf24;
-      --slate-950: #020617;
+      --navy-950: #070e1a;
+      --navy-900: #0b1628;
+      --navy-800: #13223b;
+      --navy-700: #1c3154;
+      --gold-500: #d4af37;
+      --gold-400: #e3c356;
+      --gold-600: #b69121;
+      --gold-soft: rgba(212, 175, 55, 0.14);
+      --ivory-50: #fbfaf7;
+      --ivory-100: #f3f0e8;
       --slate-900: #0f172a;
       --slate-700: #334155;
       --slate-600: #475569;
       --slate-400: #94a3b8;
       --slate-300: #cbd5e1;
-      --slate-200: #e2e8f0;
-      --danger: #ef4444;
-      --radius-sm: 10px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --shadow-sm: 0 4px 20px rgba(15, 23, 42, 0.05);
-      --shadow-md: 0 14px 36px rgba(15, 23, 42, 0.09);
-      --shadow-glow: 0 0 32px rgba(6, 182, 212, 0.28);
+      --white: #ffffff;
+      --danger: #dc2626;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 4px 16px rgba(11, 22, 40, 0.06);
+      --shadow-md: 0 12px 32px rgba(11, 22, 40, 0.1);
+      --shadow-lg: 0 20px 48px rgba(7, 14, 26, 0.24);
       --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -57,26 +53,21 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 82px;
+      scroll-padding-top: 84px;
     }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--slate-900);
-      background-color: var(--bg-light);
+      background-color: var(--ivory-50);
       line-height: 1.65;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, h4, .brand {
-      font-family: 'Space Grotesk', sans-serif;
-      line-height: 1.18;
-      letter-spacing: -0.02em;
-    }
-
-    .mono {
-      font-family: 'JetBrains Mono', monospace;
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.22;
     }
 
     a {
@@ -92,31 +83,29 @@
 
     .container {
       width: 100%;
-      max-width: 1240px;
+      max-width: 1220px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     /* ==========================================================================
-       Slower Scroll-Up & Scroll-Down Reveal Animations
+       Slower, Smooth Scroll-Reveal Animations (Scrolling Down & Scrolling Up)
        ========================================================================== */
     .reveal {
       opacity: 0;
-      transform: translateY(58px);
-      filter: blur(4px);
+      transform: translateY(56px);
       transition:
         opacity 1.35s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 1.35s cubic-bezier(0.22, 1, 0.36, 1),
-        filter 1.35s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: opacity, transform, filter;
+        transform 1.35s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
     }
 
     .reveal.reveal-left {
-      transform: translateX(-58px);
+      transform: translateX(-56px);
     }
 
     .reveal.reveal-right {
-      transform: translateX(58px);
+      transform: translateX(56px);
     }
 
     .reveal.reveal-scale {
@@ -126,228 +115,241 @@
     .reveal.is-visible {
       opacity: 1;
       transform: translate(0, 0) scale(1);
-      filter: blur(0);
     }
 
-    .delay-1 { transition-delay: 0.14s; }
-    .delay-2 { transition-delay: 0.28s; }
-    .delay-3 { transition-delay: 0.42s; }
-    .delay-4 { transition-delay: 0.56s; }
+    .delay-1 { transition-delay: 0.18s; }
+    .delay-2 { transition-delay: 0.36s; }
+    .delay-3 { transition-delay: 0.54s; }
+    .delay-4 { transition-delay: 0.72s; }
 
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
         transform: none;
-        filter: none;
         transition: none;
       }
     }
 
-    /* ==========================================================================
-       Tech Keyframe Animations (Pulse, Float, Cyber Grid)
-       ========================================================================== */
-    @keyframes pulseDot {
+    /* Blinking Dot Animation for "Coming Soon" & "Live" */
+    @keyframes blinkPulse {
       0%, 100% {
         opacity: 1;
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+        box-shadow: 0 0 0 0 currentColor;
       }
       50% {
-        opacity: 0.4;
-        transform: scale(0.88);
-        box-shadow: 0 0 0 8px rgba(34, 211, 238, 0);
+        opacity: 0.25;
+        transform: scale(0.85);
+        box-shadow: 0 0 8px 2px currentColor;
       }
     }
 
-    @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+    .blink-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: currentColor;
+      animation: blinkPulse 1.4s infinite ease-in-out;
+      flex-shrink: 0;
     }
 
-    @keyframes gridMove {
-      0% { background-position: 0 0; }
-      100% { background-position: 48px 48px; }
-    }
-
+    /* Shake Animation for Invalid Input */
     @keyframes inputShake {
       0%, 100% { transform: translateX(0); }
       20%, 60% { transform: translateX(-6px); }
       40%, 80% { transform: translateX(6px); }
     }
 
-    @keyframes logoSpinPulse {
-      0%, 100% { filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.55)); }
-      50% { filter: drop-shadow(0 0 14px rgba(59, 130, 246, 0.85)); }
-    }
-
     .shake {
       animation: inputShake 0.4s ease-in-out;
     }
 
-    .tech-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--cyan-400);
-      animation: pulseDot 1.8s infinite ease-in-out;
+    /* Section Styling */
+    .section {
+      padding: 96px 0;
     }
 
-    /* Tech Cyber Grid Overlay */
-    .cyber-grid-bg {
-      position: relative;
-      overflow: hidden;
+    .section-dark {
+      background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
+      color: var(--white);
     }
 
-    .cyber-grid-bg::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(to right, rgba(59, 130, 246, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(59, 130, 246, 0.06) 1px, transparent 1px);
-      background-size: 48px 48px;
-      animation: gridMove 16s linear infinite;
-      pointer-events: none;
-      z-index: 0;
+    .section-ivory {
+      background-color: var(--ivory-50);
     }
 
-    /* Navbar & Meaningful Custom SVG Logo */
+    .section-sand {
+      background-color: var(--ivory-100);
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold-600);
+      background: var(--gold-soft);
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .section-dark .eyebrow {
+      color: var(--gold-400);
+      background: rgba(212, 175, 55, 0.12);
+      border-color: rgba(212, 175, 55, 0.28);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 16px;
+      color: var(--navy-900);
+    }
+
+    .section-dark .section-title {
+      color: var(--white);
+    }
+
+    .section-subtitle {
+      font-size: 1.08rem;
+      color: var(--slate-600);
+    }
+
+    .section-dark .section-subtitle {
+      color: var(--slate-300);
+    }
+
+    /* Navigation */
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(6, 11, 22, 0.88);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(56, 189, 248, 0.14);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      transition: var(--transition);
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 76px;
+      height: 78px;
     }
 
     .brand {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 1.32rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35rem;
       font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 0.03em;
+      color: var(--navy-900);
     }
 
-    .brand-logo-svg {
+    .brand img {
       width: 42px;
       height: 42px;
-      flex-shrink: 0;
-      animation: logoSpinPulse 3.5s infinite ease-in-out;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
     }
 
-    .brand:hover .brand-logo-svg {
-      transform: rotate(12deg) scale(1.06);
-    }
-
-    .brand-text-wrap {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-    }
-
-    .brand-title {
-      background: linear-gradient(90deg, #ffffff 0%, var(--cyan-400) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 1.26rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-
-    .brand-sub {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--cyan-400);
-      opacity: 0.85;
-      margin-top: 2px;
+    .brand span.gold {
+      color: var(--gold-600);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 26px;
       list-style: none;
     }
 
     .nav-links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--slate-300);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--slate-700);
       position: relative;
       padding: 4px 0;
     }
 
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: var(--gold-500);
+      transition: var(--transition);
+    }
+
     .nav-links a:hover {
-      color: var(--cyan-400);
+      color: var(--navy-900);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     .nav-cta {
-      background: linear-gradient(135deg, var(--cyan-500), var(--blue-600));
-      color: #ffffff !important;
+      background: var(--navy-900);
+      color: var(--white) !important;
       padding: 10px 20px !important;
       border-radius: 999px;
-      font-weight: 600 !important;
       font-size: 0.88rem !important;
-      box-shadow: 0 4px 18px rgba(6, 182, 212, 0.35);
+      border: 1px solid var(--navy-900);
+    }
+
+    .nav-cta::after {
+      display: none !important;
     }
 
     .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.55);
+      background: var(--gold-500);
+      color: var(--navy-950) !important;
+      border-color: var(--gold-500);
     }
 
     .menu-toggle {
       display: none;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: none;
+      border: 1px solid var(--slate-300);
       border-radius: 8px;
       padding: 8px 12px;
-      font-size: 1.2rem;
-      color: #ffffff;
+      font-size: 1.25rem;
+      color: var(--navy-900);
       cursor: pointer;
     }
 
-    /* Hero Section with Neural Particle Canvas */
+    /* Hero Section */
     .hero {
       position: relative;
-      background: radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.2), transparent 45%),
-                  radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.18), transparent 45%),
-                  linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%);
-      color: #ffffff;
-      padding: 104px 0 92px;
+      background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.16), transparent 45%),
+                  radial-gradient(circle at 15% 80%, rgba(56, 189, 248, 0.1), transparent 40%),
+                  linear-gradient(160deg, var(--navy-950) 0%, var(--navy-900) 60%, var(--navy-800) 100%);
+      color: var(--white);
+      padding: 110px 0 96px;
       overflow: hidden;
-      border-bottom: 1px solid rgba(56, 189, 248, 0.16);
-    }
-
-    #techCanvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
     }
 
     .hero-grid {
-      position: relative;
-      z-index: 2;
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 52px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 56px;
       align-items: center;
     }
 
@@ -357,43 +359,49 @@
       gap: 10px;
       padding: 7px 16px;
       border-radius: 999px;
-      background: rgba(6, 182, 212, 0.12);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      color: var(--cyan-400);
+      background: rgba(212, 175, 55, 0.14);
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      color: var(--gold-400);
       font-size: 0.82rem;
       font-weight: 600;
-      margin-bottom: 22px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 4.7vw, 3.85rem);
+      font-size: clamp(2.5rem, 4.8vw, 3.85rem);
       margin-bottom: 20px;
-      color: #ffffff;
+      color: var(--white);
     }
 
     .hero h1 span {
-      background: linear-gradient(90deg, var(--cyan-400), #60a5fa, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--gold-400);
+      font-style: italic;
     }
 
     .hero-lead {
-      font-size: 1.12rem;
+      font-size: 1.16rem;
       color: var(--slate-300);
-      max-width: 610px;
-      margin-bottom: 30px;
+      max-width: 620px;
+      margin-bottom: 16px;
+    }
+
+    .hero-motto {
+      font-size: 0.96rem;
+      color: var(--gold-400);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 36px;
     }
 
     .btn-row {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 36px;
     }
 
     .btn {
-      position: relative;
-      overflow: hidden;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -407,557 +415,782 @@
       border: 1px solid transparent;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--cyan-500), var(--blue-600));
-      color: #ffffff;
-      box-shadow: 0 8px 24px rgba(6, 182, 212, 0.32);
+    .btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
     }
 
-    .btn-primary:hover {
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+      color: var(--navy-950);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.28);
+    }
+
+    .btn-gold:hover:not(:disabled) {
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(6, 182, 212, 0.5);
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.4);
     }
 
-    .btn-outline-tech {
-      background: rgba(255, 255, 255, 0.05);
-      color: #ffffff;
-      border-color: rgba(34, 211, 238, 0.35);
+    .btn-outline-light {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.24);
     }
 
-    .btn-outline-tech:hover {
-      background: rgba(6, 182, 212, 0.15);
-      border-color: var(--cyan-400);
-      transform: translateY(-2px);
-    }
-
-    .btn-dark {
-      background: var(--slate-900);
-      color: #ffffff;
-    }
-
-    .btn-dark:hover {
-      background: var(--blue-600);
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: var(--gold-400);
       transform: translateY(-2px);
     }
 
-    .btn-ghost {
-      background: var(--bg-light-alt);
-      color: var(--slate-700);
-      border-color: var(--slate-200);
+    .btn-navy {
+      background: var(--navy-900);
+      color: var(--white);
     }
 
-    .btn-ghost:hover {
-      border-color: var(--cyan-500);
-      color: var(--blue-600);
+    .btn-navy:hover {
+      background: var(--navy-700);
+      transform: translateY(-2px);
     }
 
-    .btn-sm {
-      padding: 9px 16px;
-      font-size: 0.84rem;
-    }
-
-    .hero-audience {
-      font-size: 0.88rem;
-      color: var(--slate-400);
-      margin-bottom: 14px;
-    }
-
-    .hero-pillars {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .hero-pillar-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 15px;
-      border-radius: 999px;
-      background: rgba(15, 25, 48, 0.85);
-      border: 1px solid rgba(56, 189, 248, 0.24);
-      color: #e2e8f0;
-      font-size: 0.84rem;
-      font-weight: 600;
-    }
-
-    /* Hero Image Frame with Floating Tech Animation */
-    .hero-visual-wrap {
-      position: relative;
-      animation: floatSlow 6s ease-in-out infinite;
-    }
-
-    .hero-visual-frame {
-      position: relative;
+    /* Hero Executive Summary Card */
+    .hero-card {
+      background: rgba(19, 34, 59, 0.78);
+      border: 1px solid rgba(212, 175, 55, 0.3);
       border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid rgba(34, 211, 238, 0.4);
-      box-shadow: 0 24px 60px rgba(2, 6, 23, 0.65), 0 0 40px rgba(6, 182, 212, 0.22);
-      background: var(--bg-dark);
-    }
-
-    .hero-visual-frame img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .hero-floating-badge {
-      position: absolute;
-      bottom: 18px;
-      left: 18px;
-      right: 18px;
-      background: rgba(6, 11, 22, 0.86);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      border-radius: var(--radius-md);
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 0.84rem;
-      color: var(--slate-300);
     }
 
-    /* Sections */
-    .section {
-      position: relative;
-      padding: 96px 0;
-    }
-
-    .section-light {
-      background-color: var(--bg-light);
-    }
-
-    .section-alt {
-      background-color: var(--bg-light-alt);
-    }
-
-    .section-dark {
-      background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%);
-      color: #ffffff;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin: 0 auto 56px;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.78rem;
-      font-weight: 700;
+    .hero-card-title {
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--blue-600);
-      background: rgba(59, 130, 246, 0.1);
-      padding: 6px 16px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-      border: 1px solid rgba(59, 130, 246, 0.25);
-    }
-
-    .section-dark .eyebrow {
-      color: var(--cyan-400);
-      background: rgba(6, 182, 212, 0.12);
-      border-color: rgba(34, 211, 238, 0.3);
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 3.5vw, 2.75rem);
-      margin-bottom: 14px;
-      color: var(--slate-950);
-    }
-
-    .section-dark .section-title {
-      color: #ffffff;
-    }
-
-    .section-subtitle {
-      font-size: 1.06rem;
-      color: var(--slate-600);
-    }
-
-    .section-dark .section-subtitle {
-      color: var(--slate-300);
-    }
-
-    /* Tech Cards with Holographic Shimmer */
-    .tech-card {
-      position: relative;
-      overflow: hidden;
-      background: var(--bg-white);
-      border-radius: var(--radius-md);
-      padding: 30px 26px;
-      border: 1px solid var(--slate-200);
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-      z-index: 2;
-    }
-
-    .tech-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 60%;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--cyan-500), var(--blue-600), transparent);
-      transition: left 0.65s ease;
-    }
-
-    .tech-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(6, 182, 212, 0.5);
-    }
-
-    .tech-card:hover::after {
-      left: 140%;
-    }
-
-    /* About Section */
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-      margin-bottom: 36px;
-    }
-
-    .about-grid h3 {
-      font-size: 1.25rem;
-      color: var(--slate-950);
-      margin-bottom: 10px;
-    }
-
-    .about-grid p {
-      font-size: 0.92rem;
-      color: var(--slate-600);
-    }
-
-    .feature-pills-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .feature-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 18px;
-      border-radius: 999px;
-      background: var(--bg-white);
-      border: 1px solid var(--slate-200);
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--slate-700);
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-    }
-
-    .feature-pill:hover {
-      border-color: var(--cyan-500);
-      color: var(--blue-600);
-      transform: translateY(-2px);
-    }
-
-    /* Services 8-Grid */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .service-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .service-icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.14), rgba(59, 130, 246, 0.14));
-      border: 1px solid rgba(6, 182, 212, 0.3);
-      color: var(--blue-600);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      letter-spacing: 0.14em;
+      color: var(--gold-400);
       font-weight: 700;
-      font-size: 0.85rem;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .service-card h3 {
-      font-size: 1.22rem;
-      color: var(--slate-950);
+    .hero-stat-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero-stat-item {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: rgba(7, 14, 26, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-stat-item strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .hero-stat-item span {
+      font-size: 0.88rem;
+      color: var(--slate-300);
+    }
+
+    /* Foundation & Journey */
+    .foundation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 56px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      transition: var(--transition);
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-600);
       margin-bottom: 10px;
     }
 
-    .service-card p {
-      font-size: 0.91rem;
-      color: var(--slate-600);
-      margin-bottom: 22px;
-    }
-
-    .service-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    /* ==========================================================================
-       Our Work Section (Clean Category Tabs + Search)
-       ========================================================================== */
-    .work-controls {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 32px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .filter-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .filter-btn {
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--slate-300);
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: linear-gradient(135deg, var(--cyan-500), var(--blue-600));
-      color: #ffffff;
-      border-color: transparent;
-      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.35);
-    }
-
-    .work-search {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      background: rgba(15, 25, 48, 0.85);
-      color: #ffffff;
-      font-family: inherit;
-      font-size: 0.9rem;
-      min-width: 240px;
-    }
-
-    .work-search::placeholder {
-      color: var(--slate-400);
-    }
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .work-card {
-      background: var(--bg-card-dark);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      border-radius: var(--radius-md);
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      backdrop-filter: blur(12px);
-      transition: var(--transition);
-    }
-
-    .work-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--cyan-400);
-      box-shadow: var(--shadow-glow);
-    }
-
-    .work-top-meta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+    .info-card h3 {
+      font-size: 1.5rem;
+      color: var(--navy-900);
       margin-bottom: 12px;
     }
 
-    .category-badge {
-      font-size: 0.73rem;
+    .info-card p {
+      color: var(--slate-600);
+    }
+
+    /* Journey Box */
+    .journey-box {
+      background: var(--navy-900);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      margin-bottom: 56px;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      box-shadow: var(--shadow-md);
+    }
+
+    .journey-box-header {
+      margin-bottom: 32px;
+    }
+
+    .journey-box-header h3 {
+      font-size: 1.75rem;
+      color: var(--white);
+      margin-top: 6px;
+    }
+
+    .journey-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .journey-step {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .journey-step:hover {
+      border-color: rgba(212, 175, 55, 0.45);
+      transform: translateY(-3px);
+    }
+
+    .step-label {
+      font-size: 0.78rem;
       font-weight: 700;
-      color: var(--cyan-400);
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: var(--gold-400);
+      margin-bottom: 8px;
     }
 
-    .work-card h3 {
-      font-size: 1.28rem;
-      color: #ffffff;
-      margin-bottom: 10px;
+    .journey-step h4 {
+      font-size: 1.18rem;
+      margin-bottom: 8px;
+      color: var(--white);
     }
 
-    .work-card p {
-      font-size: 0.9rem;
+    .journey-step p {
+      font-size: 0.92rem;
       color: var(--slate-300);
-      margin-bottom: 18px;
     }
 
-    .tech-tags {
+    /* Vision, Mission & Values */
+    .vm-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    .values-strip {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .values-strip h4 {
+      font-size: 1.15rem;
+      color: var(--navy-900);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .values-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 16px;
+      gap: 12px;
     }
 
-    .tech-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.73rem;
-      padding: 4px 10px;
-      border-radius: 6px;
-      background: rgba(6, 182, 212, 0.14);
-      color: var(--cyan-400);
-      border: 1px solid rgba(34, 211, 238, 0.28);
+    .value-pill {
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: var(--ivory-100);
+      color: var(--navy-900);
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid rgba(212, 175, 55, 0.35);
     }
 
-    .work-footer-row {
+    /* Organisational Ecosystem */
+    .ecosystem-parent {
+      max-width: 680px;
+      margin: 0 auto 36px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(19, 34, 59, 0.9));
+      border: 1px solid var(--gold-500);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+    }
+
+    .ecosystem-parent h3 {
+      font-size: 1.65rem;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .ecosystem-parent p {
+      font-size: 0.95rem;
+      color: var(--gold-400);
+    }
+
+    .verticals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .vertical-card {
+      background: rgba(19, 34, 59, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .vertical-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-400);
+      background: rgba(19, 34, 59, 0.95);
+    }
+
+    .vertical-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 14px;
+      margin-bottom: 16px;
     }
 
-    .work-footer-note {
-      font-size: 0.76rem;
-      color: var(--slate-400);
-    }
-
-    .work-enquire-link {
-      background: none;
-      border: none;
-      color: var(--cyan-400);
-      font-family: inherit;
-      font-size: 0.8rem;
+    .vertical-domain {
+      font-size: 0.74rem;
       font-weight: 700;
-      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-400);
+    }
+
+    /* Status Badges */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .status-live {
+      background: rgba(16, 185, 129, 0.16);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .status-coming-soon-dark {
+      background: rgba(245, 158, 11, 0.16);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.45);
+    }
+
+    .badge-light-live {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+
+    .badge-light-coming-soon {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fcd34d;
+    }
+
+    .vertical-card h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .vertical-card p {
+      font-size: 0.94rem;
+      color: var(--slate-300);
+      margin-bottom: 20px;
+    }
+
+    .vertical-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 18px;
+    }
+
+    .vertical-list li {
+      font-size: 0.88rem;
+      color: var(--slate-300);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .vertical-list li::before {
+      content: '◆';
+      color: var(--gold-400);
+      font-size: 0.75rem;
+      margin-top: 3px;
+    }
+
+    /* MVAPS Solutions Section */
+    .solutions-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .pillar-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: var(--shadow-sm);
       transition: var(--transition);
     }
 
-    .work-enquire-link:hover {
-      color: #ffffff;
-      transform: translateX(3px);
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(212, 175, 55, 0.45);
     }
 
-    /* How It Works & Difference */
-    .steps-grid {
+    .pillar-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--gold-600);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.3rem;
+      color: var(--navy-900);
+      margin-bottom: 10px;
+    }
+
+    .pillar-card p {
+      font-size: 0.94rem;
+      color: var(--slate-600);
+    }
+
+    /* Services 4-Grid */
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-bottom: 36px;
-      position: relative;
-      z-index: 2;
+      gap: 22px;
+      margin-bottom: 56px;
     }
 
-    .step-num-badge {
-      font-family: 'JetBrains Mono', monospace;
-      display: inline-flex;
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      border-top: 4px solid var(--gold-500);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--navy-900);
+      color: var(--gold-400);
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--cyan-500), var(--blue-600));
-      color: #ffffff;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 1rem;
       margin-bottom: 16px;
-      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.3);
     }
 
-    /* Project Enquiry Form */
-    .enquiry-card {
-      background: var(--bg-white);
+    .service-card h4 {
+      font-size: 1.12rem;
+      color: var(--navy-900);
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+    }
+
+    /* Project Nest AI Spotlight */
+    .project-nest-panel {
+      background: linear-gradient(145deg, var(--navy-900), var(--navy-800));
+      color: var(--white);
       border-radius: var(--radius-lg);
       padding: 48px;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--slate-200);
-      position: relative;
-      z-index: 2;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: var(--shadow-lg);
     }
 
-    .enquiry-trust-bar {
+    .pn-top {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .pn-top h3 {
+      font-size: 2rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .pn-top p {
+      color: var(--slate-300);
       margin-bottom: 24px;
     }
 
-    .trust-box {
-      background: var(--bg-light);
-      border: 1px solid var(--slate-200);
+    .pn-tracks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .pn-track {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-sm);
-      padding: 14px 18px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--slate-700);
+      padding: 16px;
+      transition: var(--transition);
+    }
+
+    .pn-track:hover {
+      border-color: rgba(212, 175, 55, 0.45);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .pn-track strong {
+      display: block;
+      font-size: 0.94rem;
+      color: var(--gold-400);
+      margin-bottom: 4px;
+    }
+
+    .pn-track span {
+      font-size: 0.84rem;
+      color: var(--slate-300);
+    }
+
+    /* Products Portfolio */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .product-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 36px;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f9f6ed 100%);
+      border: 2px solid var(--gold-500);
+    }
+
+    .product-logo-wrap {
       display: flex;
       align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .product-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      background: var(--navy-900);
+    }
+
+    .product-featured-img {
+      width: 100%;
+      max-height: 260px;
+      object-fit: contain;
+      background: var(--navy-900);
+      padding: 24px;
+      border-radius: var(--radius-md);
+    }
+
+    .product-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .product-card h3 {
+      font-size: 1.55rem;
+      color: var(--navy-900);
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      color: var(--slate-600);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .feature-checklist {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .feature-checklist li {
+      font-size: 0.9rem;
+      color: var(--slate-700);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .feature-checklist li::before {
+      content: '✓';
+      font-weight: 700;
+      color: var(--gold-600);
+    }
+
+    /* Founders & Leadership */
+    .founders-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .founder-card {
+      background: rgba(19, 34, 59, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .founder-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-500);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .founder-avatar {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid var(--gold-500);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .founder-card h3 {
+      font-size: 1.45rem;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .founder-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gold-400);
+      margin-bottom: 16px;
+    }
+
+    .founder-card p {
+      font-size: 0.92rem;
+      color: var(--slate-300);
+    }
+
+    /* Culture & Future Direction */
+    .culture-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .culture-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 34px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .culture-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .culture-card h3 {
+      font-size: 1.4rem;
+      color: var(--navy-900);
+      margin-bottom: 16px;
+    }
+
+    .culture-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .culture-list li {
+      font-size: 0.94rem;
+      color: var(--slate-700);
+      display: flex;
+      align-items: flex-start;
       gap: 10px;
     }
 
-    .form-grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-bottom: 18px;
+    .culture-list li::before {
+      content: '→';
+      color: var(--gold-600);
+      font-weight: 700;
     }
 
-    .form-grid-2 {
+    /* Contact Section */
+    .contact-wrapper {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-bottom: 18px;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .contact-info h3 {
+      font-size: 1.75rem;
+      color: var(--navy-900);
+      margin-bottom: 14px;
+    }
+
+    .contact-info p {
+      color: var(--slate-600);
+      margin-bottom: 28px;
+    }
+
+    .contact-detail-list {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .contact-detail-item strong {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-600);
+      margin-bottom: 4px;
+    }
+
+    .contact-detail-item span {
+      font-size: 0.98rem;
+      color: var(--navy-900);
+      font-weight: 600;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-row-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
     .form-group {
       display: grid;
       gap: 6px;
-      margin-bottom: 16px;
     }
 
     .form-group label {
       font-size: 0.88rem;
       font-weight: 600;
-      color: var(--slate-900);
+      color: var(--navy-900);
     }
 
     .form-group input,
@@ -968,9 +1201,9 @@
       border-radius: var(--radius-sm);
       border: 1px solid var(--slate-300);
       font-family: inherit;
-      font-size: 0.94rem;
+      font-size: 0.95rem;
       color: var(--slate-900);
-      background: var(--bg-light);
+      background: var(--ivory-50);
       transition: var(--transition);
     }
 
@@ -978,24 +1211,24 @@
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--cyan-500);
-      background: var(--bg-white);
-      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.18);
+      border-color: var(--gold-500);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
     }
 
-    .form-group input.input-invalid,
-    .form-group select.input-invalid,
-    .form-group textarea.input-invalid {
+    /* Invalid Email Input State */
+    .form-group input.input-invalid {
       border-color: var(--danger) !important;
-      background: #fff5f5 !important;
-      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.16) !important;
+      background-color: #fff5f5 !important;
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15) !important;
     }
 
     .field-error-msg {
       display: none;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--danger);
+      margin-top: 2px;
     }
 
     .field-error-msg.visible {
@@ -1009,7 +1242,6 @@
       font-size: 0.92rem;
       font-weight: 600;
       text-align: center;
-      margin-top: 14px;
     }
 
     .form-status.success {
@@ -1019,295 +1251,21 @@
       border: 1px solid #86efac;
     }
 
-    /* FAQ Accordion */
-    .faq-list {
-      max-width: 860px;
-      margin: 0 auto;
-      display: grid;
-      gap: 14px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .faq-item {
-      background: var(--bg-white);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--slate-200);
-      overflow: hidden;
-      transition: var(--transition);
-    }
-
-    .faq-item:hover {
-      border-color: rgba(6, 182, 212, 0.45);
-    }
-
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      padding: 20px 24px;
-      background: none;
-      border: none;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.04rem;
-      font-weight: 700;
-      color: var(--slate-950);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    .faq-answer {
-      display: none;
-      padding: 0 24px 20px;
-      font-size: 0.94rem;
-      color: var(--slate-600);
-      border-top: 1px solid var(--slate-200);
-      padding-top: 14px;
-    }
-
-    .faq-item.open .faq-answer {
+    .form-status.error {
       display: block;
-    }
-
-    .faq-toggle-icon {
-      font-weight: 700;
-      color: var(--cyan-500);
-      font-size: 1.25rem;
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
     }
 
     /* ==========================================================================
-       Our Customer Experience — 5.5s Auto-Sliding Right-to-Left Review Carousel
+       Warning Popup Modal for Invalid Email
        ========================================================================== */
-    .reviews-stage-wrap {
-      max-width: 920px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .reviews-viewport {
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      position: relative;
-    }
-
-    .reviews-track {
-      display: flex;
-      width: 100%;
-      transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: transform;
-    }
-
-    .review-slide {
-      min-width: 100%;
-      flex: 0 0 100%;
-      padding: 4px;
-    }
-
-    .review-card {
-      position: relative;
-      overflow: hidden;
-      background: rgba(15, 25, 48, 0.86);
-      border: 1px solid rgba(34, 211, 238, 0.32);
-      border-radius: var(--radius-lg);
-      padding: 44px 42px 38px;
-      box-shadow: 0 22px 54px rgba(2, 6, 23, 0.55), 0 0 36px rgba(6, 182, 212, 0.14);
-      backdrop-filter: blur(16px);
-    }
-
-    .review-top-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-
-    .review-stars {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      color: var(--amber-400);
-      font-size: 1.15rem;
-      letter-spacing: 2px;
-    }
-
-    .review-service-pill {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.76rem;
-      font-weight: 600;
-      color: var(--cyan-400);
-      background: rgba(6, 182, 212, 0.14);
-      border: 1px solid rgba(34, 211, 238, 0.32);
-      padding: 6px 14px;
-      border-radius: 999px;
-    }
-
-    .review-quote {
-      font-size: clamp(1.06rem, 1.8vw, 1.26rem);
-      color: #f1f5f9;
-      line-height: 1.72;
-      margin-bottom: 28px;
-      font-style: italic;
-      position: relative;
-    }
-
-    .review-author-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 22px;
-    }
-
-    .review-author-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .review-avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--cyan-500), var(--indigo-500));
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      border: 2px solid rgba(34, 211, 238, 0.55);
-      box-shadow: 0 0 18px rgba(6, 182, 212, 0.35);
-      flex-shrink: 0;
-    }
-
-    .review-author-meta h4 {
-      font-size: 1.12rem;
-      color: #ffffff;
-      margin-bottom: 3px;
-    }
-
-    .review-author-meta span {
-      font-size: 0.86rem;
-      color: var(--slate-400);
-      display: block;
-    }
-
-    .review-verified {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--emerald-400);
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(52, 211, 153, 0.3);
-      padding: 5px 12px;
-      border-radius: 999px;
-    }
-
-    .review-progress-bar {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 4px;
-      width: 0%;
-      background: linear-gradient(90deg, var(--cyan-400), var(--blue-500), var(--indigo-500));
-    }
-
-    .reviews-controls-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    .reviews-dots {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .review-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      border: none;
-      background: rgba(255, 255, 255, 0.22);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .review-dot.active {
-      width: 30px;
-      background: var(--cyan-400);
-      box-shadow: 0 0 12px rgba(34, 211, 238, 0.65);
-    }
-
-    .reviews-nav-btns {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .review-arrow-btn {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      background: rgba(15, 25, 48, 0.8);
-      color: #ffffff;
-      font-size: 1rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--transition);
-    }
-
-    .review-arrow-btn:hover {
-      background: linear-gradient(135deg, var(--cyan-500), var(--blue-600));
-      border-color: transparent;
-      transform: translateY(-2px);
-    }
-
-    /* Next Step CTA Banner */
-    .cta-banner {
-      background: radial-gradient(circle at 80% 30%, rgba(6, 182, 212, 0.25), transparent 50%),
-                  linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%);
-      color: #ffffff;
-      text-align: center;
-      padding: 84px 24px;
-      border-top: 1px solid rgba(56, 189, 248, 0.2);
-      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-    }
-
-    .cta-banner h2 {
-      font-size: clamp(2rem, 3.6vw, 2.85rem);
-      margin-bottom: 12px;
-    }
-
-    .cta-banner p {
-      color: var(--slate-300);
-      font-size: 1.08rem;
-      margin-bottom: 28px;
-    }
-
-    /* Warning & Service Info Modal */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(2, 6, 23, 0.72);
-      backdrop-filter: blur(6px);
+      background: rgba(7, 14, 26, 0.68);
+      backdrop-filter: blur(5px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1324,39 +1282,41 @@
     }
 
     .modal-box {
-      background: var(--bg-white);
+      background: var(--white);
       border-radius: var(--radius-lg);
-      max-width: 460px;
+      max-width: 440px;
       width: 100%;
       padding: 32px 28px;
       text-align: center;
-      box-shadow: 0 24px 60px rgba(2, 6, 23, 0.4);
+      box-shadow: var(--shadow-lg);
       border-top: 5px solid var(--danger);
+      transform: translateY(20px) scale(0.95);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .modal-box.info-mode {
-      border-top-color: var(--cyan-500);
-      text-align: left;
+    .modal-overlay.active .modal-box {
+      transform: translateY(0) scale(1);
     }
 
     .modal-icon {
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       background: #fef2f2;
       color: var(--danger);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       border: 1px solid #fecaca;
     }
 
     .modal-box h4 {
-      font-size: 1.4rem;
-      color: var(--slate-950);
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      color: var(--navy-900);
       margin-bottom: 10px;
     }
 
@@ -1368,22 +1328,29 @@
 
     /* Footer */
     .footer {
-      background: var(--slate-950);
+      background: var(--navy-950);
       color: var(--slate-300);
       padding: 64px 0 36px;
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr 1fr 1fr;
       gap: 36px;
-      padding-bottom: 40px;
+      padding-bottom: 44px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
+    .footer-brand {
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
     .footer-col h4 {
-      color: #ffffff;
-      font-size: 1.05rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--gold-400);
+      font-size: 1.1rem;
       margin-bottom: 14px;
     }
 
@@ -1395,33 +1362,33 @@
     }
 
     .footer-col a:hover {
-      color: var(--cyan-400);
+      color: var(--gold-400);
     }
 
     .footer-bottom {
-      padding-top: 26px;
+      padding-top: 28px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 16px;
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--slate-400);
     }
 
+    /* Responsive Adjustments */
     @media (max-width: 1024px) {
-      .hero-grid {
+      .hero-grid,
+      .pn-top,
+      .product-card.featured,
+      .contact-wrapper {
         grid-template-columns: 1fr;
       }
 
-      .about-grid,
-      .services-grid,
-      .steps-grid,
-      .footer-grid {
+      .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .work-grid,
-      .enquiry-trust-bar {
+      .footer-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -1434,491 +1401,800 @@
       .nav-links {
         display: none;
         position: absolute;
-        top: 76px;
+        top: 78px;
         left: 0;
         right: 0;
-        background: var(--bg-dark);
+        background: var(--white);
         flex-direction: column;
         padding: 24px;
         gap: 16px;
-        border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        border-bottom: 1px solid var(--slate-300);
+        box-shadow: var(--shadow-md);
       }
 
       .nav-links.open {
         display: flex;
       }
 
-      .about-grid,
+      .foundation-grid,
+      .journey-steps,
+      .vm-grid,
+      .verticals-grid,
+      .solutions-pillars,
       .services-grid,
-      .work-grid,
-      .steps-grid,
-      .enquiry-trust-bar,
-      .form-grid-3,
-      .form-grid-2,
-      .footer-grid {
+      .products-grid,
+      .founders-grid,
+      .culture-grid,
+      .pn-tracks,
+      .form-row-two {
         grid-template-columns: 1fr;
       }
 
-      .enquiry-card,
-      .review-card {
-        padding: 28px 20px;
+      .section {
+        padding: 68px 0;
+      }
+
+      .project-nest-panel,
+      .journey-box,
+      .contact-wrapper {
+        padding: 28px 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar with Custom Neural Hex-Nest SVG Logo -->
+  <!-- Navigation -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="brand" aria-label="Project Nest Home">
-        <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="nestOuterGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#22d3ee" />
-              <stop offset="50%" stop-color="#3b82f6" />
-              <stop offset="100%" stop-color="#6366f1" />
-            </linearGradient>
-            <linearGradient id="nestInnerGrad" x1="12" y1="12" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#38bdf8" />
-              <stop offset="100%" stop-color="#22d3ee" />
-            </linearGradient>
-          </defs>
-          <polygon
-            points="24,3 43,13.5 43,34.5 24,45 5,34.5 5,13.5"
-            fill="rgba(11, 19, 37, 0.9)"
-            stroke="url(#nestOuterGrad)"
-            stroke-width="2.4"
-          />
-          <path
-            d="M24 10L36 17V31L24 38L12 31V17L24 10Z"
-            stroke="url(#nestInnerGrad)"
-            stroke-width="1.6"
-            stroke-opacity="0.75"
-          />
-          <path
-            d="M12 17L24 24L36 17M24 24V38"
-            stroke="#22d3ee"
-            stroke-width="1.6"
-            stroke-linecap="round"
-          />
-          <circle cx="24" cy="10" r="2.3" fill="#22d3ee" />
-          <circle cx="36" cy="17" r="2.3" fill="#38bdf8" />
-          <circle cx="36" cy="31" r="2.3" fill="#60a5fa" />
-          <circle cx="24" cy="38" r="2.3" fill="#22d3ee" />
-          <circle cx="12" cy="31" r="2.3" fill="#60a5fa" />
-          <circle cx="12" cy="17" r="2.3" fill="#38bdf8" />
-          <circle cx="24" cy="24" r="4.2" fill="url(#nestOuterGrad)" />
-          <circle cx="24" cy="24" r="2" fill="#ffffff" />
-        </svg>
-
-        <div class="brand-text-wrap">
-          <span class="brand-title">PROJECTNEST</span>
-          <span class="brand-sub">Digital &amp; AI Solutions</span>
-        </div>
+      <a href="#home" class="brand">
+        <img
+          src="https://i.postimg.cc/RZYgxbY3/Screenshot-2025-09-27-114254.png"
+          alt="MVAPS & Company Logo"
+        />
+        <span>MVAPS <span class="gold">&amp; Company</span></span>
       </a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Our Work</a></li>
-        <li><a href="#process">How It Works</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#enquiry">Contact Us</a></li>
-        <li><a href="#enquiry" class="nav-cta">Start Your Project</a></li>
+        <li><a href="#foundation">About</a></li>
+        <li><a href="#ecosystem">Ecosystem</a></li>
+        <li><a href="#solutions">MVAPS Solutions</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Hero Section with Interactive Neural Network Canvas -->
+  <!-- Hero Section -->
   <section class="hero" id="home">
-    <canvas id="techCanvas"></canvas>
-
     <div class="container hero-grid">
       <div class="reveal reveal-left">
         <div class="hero-badge">
-          <span class="tech-dot"></span>
-          Technology, built around your idea
+          Established 20 May 2024 · Nagpur, Maharashtra, India
         </div>
         <h1>
-          Turning Your Ideas Into Reality <span>With Technology.</span>
+          Building a Connected <span>Business Ecosystem.</span>
         </h1>
         <p class="hero-lead">
-          From academic projects to advanced AI solutions, websites, applications, and business
-          automation — Project Nest helps you transform your vision into powerful digital solutions.
+          MVAPS &amp; Company is the parent organisation uniting technology, digital products,
+          educational initiatives, and media platforms—guided by useful technology and
+          responsible growth.
         </p>
-
+        <p class="hero-motto">
+          Making Visions Achievable with Powerful Solutions · Empowering Ideas, Inspiring Solutions.
+        </p>
         <div class="btn-row">
-          <a href="#services" class="btn btn-primary">Explore Our Services</a>
-          <a href="#enquiry" class="btn btn-outline-tech">Discuss Your Project</a>
-        </div>
-
-        <p class="hero-audience">
-          Solutions for Students, Professionals, Startups &amp; Businesses.
-        </p>
-        <div class="hero-pillars">
-          <span class="hero-pillar-chip"><span class="tech-dot"></span>AI &amp; intelligence</span>
-          <span class="hero-pillar-chip"><span class="tech-dot"></span>Web &amp; apps</span>
-          <span class="hero-pillar-chip"><span class="tech-dot"></span>Automation</span>
-          <span class="hero-pillar-chip"><span class="tech-dot"></span>Data &amp; insight</span>
+          <a href="#ecosystem" class="btn btn-gold">Explore Our Ecosystem</a>
+          <a href="#solutions" class="btn btn-outline-light">MVAPS Solutions</a>
+          <a
+            href="https://snapdocsaio.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-light"
+          >
+            Try SnapDocs AI ↗
+          </a>
         </div>
       </div>
 
-      <div class="hero-visual-wrap reveal reveal-right delay-1">
-        <div class="hero-visual-frame">
-          <img
-            src="https://nest-of-digital-possibilities.lovable.app/assets/project-nest-hero-DIa_U3CT.jpg"
-            alt="Interconnected digital architecture representing intelligent software and technology"
-          />
-          <div class="hero-floating-badge">
-            <span><strong style="color: #fff;">Project Nest AI</strong> · Intelligent Delivery</span>
-            <span class="mono" style="color: var(--cyan-400);">ONLINE</span>
+      <aside class="hero-card reveal reveal-right delay-1" aria-label="Organisational Highlights">
+        <div class="hero-card-title">
+          <span>Ecosystem At A Glance</span>
+          <span>HQ · Nagpur</span>
+        </div>
+        <div class="hero-stat-list">
+          <div class="hero-stat-item">
+            <strong>Parent Entity · MVAPS &amp; Company</strong>
+            <span>Central coordination hub providing strategic guidance and infrastructure for all operating brands.</span>
+          </div>
+          <div class="hero-stat-item">
+            <strong>Three Connected Business Verticals</strong>
+            <span>IT &amp; Technology (MVAPS Solutions) · EdTech (Solveitly) · Digital Media (Infos Digital).</span>
+          </div>
+          <div class="hero-stat-item">
+            <strong>Digital Products &amp; Client Delivery</strong>
+            <span>Project Nest AI, SnapDocs AI, and Summarizer AI built for individuals, startups, and enterprises.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Foundation, Journey, Vision, Mission & Values -->
+  <section class="section section-ivory" id="foundation">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Foundation &amp; Journey</span>
+        <h2 class="section-title">Our Direction Is Useful Technology with Responsible Growth</h2>
+        <p class="section-subtitle">
+          Established in Nagpur, Maharashtra, MVAPS &amp; Company serves as the parent organisation
+          and strategic backbone across our technology, education, and media initiatives.
+        </p>
+      </div>
+
+      <div class="foundation-grid">
+        <div class="info-card reveal delay-1">
+          <span class="card-tag">Parent Entity</span>
+          <h3>Established 20 May 2024 in Nagpur</h3>
+          <p>
+            MVAPS &amp; Company is the parent organisation established on 20 May 2024 in Nagpur,
+            Maharashtra, India. Operating as a central coordination hub, it provides strategic
+            direction and shared infrastructure for all operating brands.
+          </p>
+        </div>
+        <div class="info-card reveal delay-2">
+          <span class="card-tag">Portfolio Scope</span>
+          <h3>Connected Multi-Vertical Scope</h3>
+          <p>
+            Our portfolio brings together software engineering, AI-powered digital products,
+            educational technology initiatives, and digital media platforms—transforming complex
+            needs into practical, reliable solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Journey Timeline -->
+      <div class="journey-box reveal">
+        <div class="journey-box-header">
+          <span class="eyebrow">Our Story</span>
+          <h3>Our Journey Began in Nagpur</h3>
+        </div>
+        <div class="journey-steps">
+          <div class="journey-step reveal delay-1">
+            <div class="step-label">20 May 2024</div>
+            <h4>Parent Organisation Established</h4>
+            <p>
+              MVAPS &amp; Company founded in Nagpur, Maharashtra as the central parent entity and
+              strategic coordination hub.
+            </p>
+          </div>
+          <div class="journey-step reveal delay-2">
+            <div class="step-label">Education Initiative</div>
+            <h4>Solveitly Platform Initiative</h4>
+            <p>
+              Organisational growth and launch of the Solveitly educational and knowledge-sharing
+              platform initiative.
+            </p>
+          </div>
+          <div class="journey-step reveal delay-3">
+            <div class="step-label">Ecosystem Growth</div>
+            <h4>Digital Product Expansion</h4>
+            <p>
+              Expansion into AI and software solutions under MVAPS Solutions, featuring Project Nest
+              AI, SnapDocs AI, and Summarizer AI.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- About Us (#about) -->
-  <section class="section section-light cyber-grid-bg" id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">A home for what's next</span>
-        <h2 class="section-title">Where Ideas Find Their Digital Home.</h2>
-        <p class="section-subtitle">
-          Project Nest is a technology-focused service provider committed to helping individuals
-          and organizations bring their ideas to life. We combine creativity, technical expertise,
-          and modern technologies to deliver customized digital solutions.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <div class="tech-card reveal delay-1">
-          <div class="service-icon-box mono">01</div>
-          <h3>Our mission</h3>
-          <p>Make technology practical and accessible, helping people move their ideas forward with thoughtful expertise.</p>
+      <!-- Vision, Mission & Core Values -->
+      <div class="vm-grid">
+        <div class="info-card reveal delay-1">
+          <span class="card-tag">Our Vision</span>
+          <h3>Meaningful Digital Solutions</h3>
+          <p>
+            Build an innovative and sustainable business ecosystem that uses technology to create
+            meaningful digital solutions.
+          </p>
         </div>
-
-        <div class="tech-card reveal delay-2">
-          <div class="service-icon-box mono">02</div>
-          <h3>Our vision</h3>
-          <p>Give every promising idea a clear path from an early conversation to a useful digital solution.</p>
-        </div>
-
-        <div class="tech-card reveal delay-3">
-          <div class="service-icon-box mono">03</div>
-          <h3>Our approach</h3>
-          <p>Listen first, clarify what matters, then shape a solution around the people and purpose behind it.</p>
-        </div>
-
-        <div class="tech-card reveal delay-4">
-          <div class="service-icon-box mono">04</div>
-          <h3>Why Project Nest?</h3>
-          <p>Customized thinking, transparent communication, and guidance that carries through delivery.</p>
+        <div class="info-card reveal delay-2">
+          <span class="card-tag">Our Mission</span>
+          <h3>Empowering Individuals, Startups &amp; Enterprises</h3>
+          <p>
+            Develop useful products, deliver technology-driven solutions, encourage innovation, and
+            create opportunities for individuals, startups, and enterprises.
+          </p>
         </div>
       </div>
 
-      <div class="feature-pills-row reveal">
-        <span class="feature-pill">✦ Customized solutions</span>
-        <span class="feature-pill">✦ Modern technology stack</span>
-        <span class="feature-pill">✦ Practical implementation</span>
-        <span class="feature-pill">✦ Transparent communication</span>
-        <span class="feature-pill">✦ Client-focused delivery</span>
-        <span class="feature-pill">✦ Support through your project lifecycle</span>
+      <div class="values-strip reveal">
+        <h4><span style="color: var(--gold-600);">✦</span> Core Values That Guide Every Engagement</h4>
+        <div class="values-pills">
+          <span class="value-pill">Innovation</span>
+          <span class="value-pill">Integrity</span>
+          <span class="value-pill">Collaboration</span>
+          <span class="value-pill">Accountability</span>
+          <span class="value-pill">Continuous Learning</span>
+          <span class="value-pill">Excellence</span>
+          <span class="value-pill">Customer Focus</span>
+          <span class="value-pill">Sustainable Growth</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Services (#services) -->
-  <section class="section section-alt" id="services">
+  <!-- Organisational Ecosystem -->
+  <section class="section section-dark" id="ecosystem">
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow">Our services</span>
-        <h2 class="section-title">Expertise for the idea you have.</h2>
+        <span class="eyebrow">Organisational Ecosystem</span>
+        <h2 class="section-title">One Parent Organisation, Three Business Verticals</h2>
         <p class="section-subtitle">
-          A connected team for ambitious student projects, business challenges, and everything in between.
+          A unified ecosystem connecting software &amp; AI innovation, educational technology, and
+          digital media.
         </p>
       </div>
 
+      <div class="ecosystem-parent reveal reveal-scale">
+        <h3>MVAPS &amp; COMPANY</h3>
+        <p>Parent Organisation · Established 20 May 2024 · Nagpur, Maharashtra, India</p>
+      </div>
+
+      <div class="verticals-grid">
+        <!-- Vertical 1: IT & Technology -->
+        <div class="vertical-card reveal delay-1">
+          <div>
+            <div class="vertical-top">
+              <span class="vertical-domain">IT &amp; Technology</span>
+              <span class="status-badge status-live">
+                <span class="blink-dot"></span>Active
+              </span>
+            </div>
+            <h4>MVAPS Solutions</h4>
+            <p>
+              The technology and software development arm delivering custom engineering, AI
+              automation, and digital products.
+            </p>
+          </div>
+          <ul class="vertical-list">
+            <li><strong>Project Nest AI</strong> — Client project delivery &amp; AI solutions</li>
+            <li><strong>SnapDocs AI</strong> — AI-powered document processing</li>
+            <li><strong>Summarizer AI</strong> — Intelligent summarization platform</li>
+          </ul>
+        </div>
+
+        <!-- Vertical 2: EdTech -->
+        <div class="vertical-card reveal delay-2">
+          <div>
+            <div class="vertical-top">
+              <span class="vertical-domain">EdTech</span>
+              <span class="status-badge status-coming-soon-dark">
+                <span class="blink-dot"></span>Coming Soon
+              </span>
+            </div>
+            <h4>Solveitly</h4>
+            <p>
+              An educational technology and knowledge-sharing platform designed to empower learners
+              of all ages.
+            </p>
+          </div>
+          <ul class="vertical-list">
+            <li>Educational resources and learning-oriented content</li>
+            <li>Structured knowledge sharing across domains</li>
+            <li>Information accessibility for students and self-learners</li>
+          </ul>
+        </div>
+
+        <!-- Vertical 3: Media -->
+        <div class="vertical-card reveal delay-3">
+          <div>
+            <div class="vertical-top">
+              <span class="vertical-domain">Digital Media</span>
+              <span class="status-badge status-coming-soon-dark">
+                <span class="blink-dot"></span>Coming Soon
+              </span>
+            </div>
+            <h4>Infos Digital</h4>
+            <p>
+              A digital video and information platform blending informative journalism with
+              engaging visual storytelling.
+            </p>
+          </div>
+          <ul class="vertical-list">
+            <li>Digital video content, shorts, and information sharing</li>
+            <li>Curated news and engaging digital entertainment</li>
+            <li>High-impact digital audience engagement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVAPS Solutions (Technology Arm) & Project Nest AI -->
+  <section class="section section-sand" id="solutions">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">MVAPS Solutions · Technology Arm</span>
+        <h2 class="section-title">Turning Complex Needs into Useful Technology</h2>
+        <p class="section-subtitle">
+          MVAPS Solutions is the technology and software development arm of MVAPS &amp; Company,
+          building practical digital solutions for enterprises, startups, students, and customers.
+        </p>
+      </div>
+
+      <!-- Core Pillars of MVAPS Solutions -->
+      <div class="solutions-pillars">
+        <div class="pillar-card reveal delay-1">
+          <div class="pillar-label">Core Identity</div>
+          <h3>Technology &amp; Software Arm</h3>
+          <p>
+            The dedicated engineering and product delivery arm of MVAPS &amp; Company, connecting
+            modern technical execution with clear business outcomes.
+          </p>
+        </div>
+        <div class="pillar-card reveal delay-2">
+          <div class="pillar-label">Core Focus Areas</div>
+          <h3>Full-Spectrum Digital Engineering</h3>
+          <p>
+            Software development, AI and machine learning, intelligent automation, web and mobile
+            applications, and client-focused digital solutions.
+          </p>
+        </div>
+        <div class="pillar-card reveal delay-3">
+          <div class="pillar-label">Execution Goal</div>
+          <h3>Reliable, Practical Outcomes</h3>
+          <p>
+            Transform ideas and requirements into reliable, practical products and measurable
+            customer delivery outcomes with accountability.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Technology Services / Technical Breadth -->
       <div class="services-grid">
-        <div class="tech-card service-card reveal delay-1">
-          <div>
-            <div class="service-icon-box mono">EDU</div>
-            <h3>Academic &amp; Student Projects</h3>
-            <p>Thoughtful project guidance that helps students understand what they build.</p>
-          </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="Academic & Student Projects" data-detail="End-to-end project guidance, clean code architecture, milestone explanations, and complete academic documentation so students genuinely understand every component of their project.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="Academic & Student Projects">Get a quote</button>
-          </div>
+        <div class="service-card reveal delay-1">
+          <div class="service-icon">WEB</div>
+          <h4>Website Development</h4>
+          <p>
+            Professional, custom, business, portfolio, and project websites engineered for speed,
+            accessibility, and modern brand presence.
+          </p>
         </div>
-
-        <div class="tech-card service-card reveal delay-2">
-          <div>
-            <div class="service-icon-box mono">AI</div>
-            <h3>AI &amp; Machine Learning</h3>
-            <p>Practical, data-led AI built around a real problem—not the buzzwords.</p>
-          </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="AI & Machine Learning" data-detail="Custom machine learning models, NLP pipelines, computer vision systems, and predictive analytics engineered around real-world datasets and measurable outcomes.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="AI & Machine Learning">Get a quote</button>
-          </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-icon">APP</div>
+          <h4>Mobile Application Development</h4>
+          <p>
+            User-friendly Android and iOS applications built with intuitive interfaces and
+            dependable performance.
+          </p>
         </div>
-
-        <div class="tech-card service-card reveal delay-3">
-          <div>
-            <div class="service-icon-box mono">AGT</div>
-            <h3>Custom AI Agents</h3>
-            <p>Purpose-built assistants for research, support, leads, and team workflows.</p>
-          </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="Custom AI Agents" data-detail="Intelligent LLM-powered agents for literature discovery, customer support triage, lead qualification, and internal knowledge workflows.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="Custom AI Agents">Get a quote</button>
-          </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-icon">AI</div>
+          <h4>AI Agents &amp; Automation</h4>
+          <p>
+            AI-driven applications, intelligent workflows, custom automation, and AI products
+            tailored to operational needs.
+          </p>
         </div>
-
-        <div class="tech-card service-card reveal delay-4">
-          <div>
-            <div class="service-icon-box mono">WEB</div>
-            <h3>Website Development</h3>
-            <p>Distinctive, responsive websites designed to move your business forward.</p>
-          </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="Website Development" data-detail="Fast, responsive websites, landing pages, and digital brand homes engineered with modern frameworks, clean SEO structure, and mobile-first layouts.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="Website Development">Get a quote</button>
-          </div>
+        <div class="service-card reveal delay-4">
+          <div class="service-icon">DEV</div>
+          <h4>Custom Software &amp; Coding</h4>
+          <p>
+            Tailored software architecture, coding solutions, and strategic problem-solving for
+            enterprises, startups, and students.
+          </p>
         </div>
+      </div>
 
-        <div class="tech-card service-card reveal delay-1">
+      <!-- Project Nest AI Spotlight -->
+      <div class="project-nest-panel reveal">
+        <div class="pn-top">
           <div>
-            <div class="service-icon-box mono">APP</div>
-            <h3>Application Development</h3>
-            <p>Custom web and mobile apps that turn complex work into simpler tools.</p>
+            <span class="eyebrow">Client Delivery Platform</span>
+            <h3>Project Nest AI — Empowering Students &amp; Enterprises</h3>
+            <p>
+              Project Nest AI is our client project delivery platform for AI, software development,
+              intelligent automation, and web and mobile solutions—helping students, startups, and
+              enterprises turn ambitious ideas into working digital products.
+            </p>
+            <a href="#contact" class="btn btn-gold">Start a Project with Us</a>
           </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="Application Development" data-detail="Full-stack web applications and Android/iOS mobile apps with secure authentication, cloud databases, and intuitive user workflows.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="Application Development">Get a quote</button>
-          </div>
-        </div>
 
-        <div class="tech-card service-card reveal delay-2">
-          <div>
-            <div class="service-icon-box mono">AUT</div>
-            <h3>Business Automation</h3>
-            <p>Less repetitive work through well-fitted workflows and practical tools.</p>
-          </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="Business Automation" data-detail="API integrations, automated routing, CRM synchronization, and custom scripts that eliminate repetitive manual tasks while keeping human oversight.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="Business Automation">Get a quote</button>
-          </div>
-        </div>
-
-        <div class="tech-card service-card reveal delay-3">
-          <div>
-            <div class="service-icon-box mono">DAT</div>
-            <h3>Data Analytics &amp; Visualization</h3>
-            <p>Clearer decisions from cleaner data, useful reports, and real-time views.</p>
-          </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="Data Analytics & Visualization" data-detail="Interactive dashboards, SQL data pipelines, Power BI / Python visualizations, and executive reporting for clearer operational decisions.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="Data Analytics & Visualization">Get a quote</button>
-          </div>
-        </div>
-
-        <div class="tech-card service-card reveal delay-4">
-          <div>
-            <div class="service-icon-box mono">UX</div>
-            <h3>UI/UX &amp; Product Design</h3>
-            <p>Well-considered digital experiences, from a rough idea to a working prototype.</p>
-          </div>
-          <div class="service-actions">
-            <button type="button" class="btn btn-ghost btn-sm learn-btn" data-service="UI/UX & Product Design" data-detail="User flows, wireframes, design systems, and interactive prototypes that make digital products intuitive before development begins.">Learn more</button>
-            <button type="button" class="btn btn-primary btn-sm quote-btn" data-service="UI/UX & Product Design">Get a quote</button>
+          <div class="pn-tracks">
+            <div class="pn-track">
+              <strong>Web &amp; Mobile</strong>
+              <span>Custom websites and mobile applications.</span>
+            </div>
+            <div class="pn-track">
+              <strong>AI Agents &amp; Automation</strong>
+              <span>Intelligent workflows and AI-driven tools.</span>
+            </div>
+            <div class="pn-track">
+              <strong>Custom Software</strong>
+              <span>Bespoke coding and digital applications.</span>
+            </div>
+            <div class="pn-track">
+              <strong>Project &amp; Portfolio</strong>
+              <span>End-to-end delivery for students, startups &amp; enterprises.</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Work (#work) -->
-  <section class="section section-dark cyber-grid-bg" id="work">
+  <!-- Products & Platform Initiatives -->
+  <section class="section section-ivory" id="products">
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow">Our work</span>
-        <h2 class="section-title">Thoughtful work, made tangible.</h2>
+        <span class="eyebrow">Products &amp; Platforms</span>
+        <h2 class="section-title">Our Product Line &amp; Digital Initiatives</h2>
         <p class="section-subtitle">
-          Explore how ideas become powerful digital solutions across AI, Agentic AI, Websites,
-          Applications, Data Analytics, Academic Projects, Automation, and UI/UX Design.
+          Explore our AI-powered document workflow application, custom project delivery platform,
+          and upcoming ecosystem initiatives.
         </p>
       </div>
 
-      <div class="work-controls reveal">
-        <div class="filter-tabs" id="filterTabs">
-          <button type="button" class="filter-btn active" data-category="all">All work</button>
-          <button type="button" class="filter-btn" data-category="AI Projects">AI Projects</button>
-          <button type="button" class="filter-btn" data-category="Agentic AI">Agentic AI</button>
-          <button type="button" class="filter-btn" data-category="Websites">Websites</button>
-          <button type="button" class="filter-btn" data-category="Applications">Applications</button>
-          <button type="button" class="filter-btn" data-category="Data Analytics">Data Analytics</button>
-          <button type="button" class="filter-btn" data-category="Academic Projects">Academic Projects</button>
-          <button type="button" class="filter-btn" data-category="Automation">Automation</button>
-          <button type="button" class="filter-btn" data-category="UI/UX Design">UI/UX Design</button>
+      <div class="products-grid">
+       
+        <div class="product-card featured reveal">
+          <div>
+            <img
+              src="https://i.postimg.cc/mZMfX7tV/Screenshot-2025-09-22-205658.png"
+              alt="SnapDocs AI Logo"
+              class="product-featured-img"
+            />
+          </div>
+          <div>
+            <div class="product-meta">
+              <span class="status-badge badge-light-live">
+                <span class="blink-dot"></span>Live Application
+              </span>
+              <span class="card-tag" style="margin: 0;">MVAPS Solutions</span>
+            </div>
+            <h3>SnapDocs AI</h3>
+            <p>
+              An AI-powered document processing platform that turns everyday document work into a
+              faster, cleaner digital workflow.
+            </p>
+            <ul class="feature-checklist">
+              <li>Converts photos to PDFs effortlessly</li>
+              <li>Transforms image formats with high fidelity</li>
+              <li>Scans documents with an AI-powered web application</li>
+              <li>Supports document enhancement, OCR text extraction &amp; PDF processing</li>
+            </ul>
+            <a
+              href="https://snapdocsaio.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-navy"
+            >
+              Launch SnapDocs AI ↗
+            </a>
+          </div>
         </div>
 
-        <input
-          type="search"
-          id="workSearch"
-          class="work-search"
-          placeholder="Search projects..."
-          aria-label="Search projects"
-        />
-      </div>
+        <!-- Summarizer AI -->
+        <div class="product-card reveal delay-1">
+          <div>
+            <div class="product-meta">
+              <span class="status-badge badge-light-coming-soon">
+                <span class="blink-dot"></span>Coming Soon
+              </span>
+              <span class="card-tag" style="margin: 0;">MVAPS Solutions</span>
+            </div>
+            <h3>Summarizer AI</h3>
+            <p>
+              An AI-powered summarization platform crafted to distil long, complex documents and
+              content into clear, concise, and actionable insights.
+            </p>
+            <ul class="feature-checklist">
+              <li>Transforms lengthy information into focused takeaways</li>
+              <li>Built for rapid reading and clear comprehension</li>
+              <li>Streamlined experience for students and professionals</li>
+            </ul>
+          </div>
+          <div>
+            <span class="status-badge badge-light-coming-soon">
+              <span class="blink-dot"></span>Coming Soon
+            </span>
+          </div>
+        </div>
 
-      <!-- Dynamically Rendered Project Cards Grid -->
-      <div class="work-grid" id="workGrid"></div>
+        <!-- Project Nest AI -->
+        <div class="product-card reveal delay-2">
+          <div>
+            <div class="product-meta">
+              <span class="status-badge badge-light-live">
+                <span class="blink-dot"></span>Active Platform
+              </span>
+              <span class="card-tag" style="margin: 0;">MVAPS Solutions</span>
+            </div>
+            <h3>Project Nest AI</h3>
+            <p>
+              Client project delivery platform for AI, software development, intelligent
+              automation, and web and mobile solutions.
+            </p>
+            <ul class="feature-checklist">
+              <li>Empowering students, startups, and enterprises</li>
+              <li>Tailored web, mobile, AI, and custom software builds</li>
+              <li>Dedicated technical guidance and quality execution</li>
+            </ul>
+          </div>
+          <div>
+            <a href="#contact" class="btn btn-navy">Request Project Delivery</a>
+          </div>
+        </div>
+
+        <!-- Solveitly -->
+        <div class="product-card reveal delay-1">
+          <div>
+            <div class="product-logo-wrap">
+              <img
+                src="https://i.postimg.cc/SKw1Ct7b/Screenshot-2025-09-13-102359.png"
+                alt="Solveitly Logo"
+                class="product-logo"
+              />
+              <div>
+                <div class="product-meta" style="margin-bottom: 4px;">
+                  <span class="status-badge badge-light-coming-soon">
+                    <span class="blink-dot"></span>Coming Soon
+                  </span>
+                </div>
+                <span class="card-tag" style="margin: 0;">EdTech Vertical</span>
+              </div>
+            </div>
+            <h3>Solveitly</h3>
+            <p>
+              Your destination for educational resources, structured knowledge sharing, and
+              comprehensive answers—empowering learners of all ages.
+            </p>
+          </div>
+          <div>
+            <span class="status-badge badge-light-coming-soon">
+              <span class="blink-dot"></span>Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- Infos Digital -->
+        <div class="product-card reveal delay-2">
+          <div>
+            <div class="product-logo-wrap">
+              <img
+                src="https://i.postimg.cc/7ZZCZv96/Screenshot-2025-10-03-214038.png"
+                alt="Infos Digital Logo"
+                class="product-logo"
+              />
+              <div>
+                <div class="product-meta" style="margin-bottom: 4px;">
+                  <span class="status-badge badge-light-coming-soon">
+                    <span class="blink-dot"></span>Coming Soon
+                  </span>
+                </div>
+                <span class="card-tag" style="margin: 0;">Media Vertical</span>
+              </div>
+            </div>
+            <h3>Infos Digital</h3>
+            <p>
+              Your one-stop destination for digital video content, information sharing, news, and
+              entertainment through captivating shorts and videos.
+            </p>
+          </div>
+          <div>
+            <span class="status-badge badge-light-coming-soon">
+              <span class="blink-dot"></span>Coming Soon
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- How It Works & The Project Nest Difference (#process) -->
-  <section class="section section-light cyber-grid-bg" id="process">
+  <!-- Leadership -->
+  <section class="section section-dark" id="leadership">
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow">How it works</span>
-        <h2 class="section-title">A clear path from idea to delivery.</h2>
+        <span class="eyebrow">Leadership</span>
+        <h2 class="section-title">Meet Our Founders</h2>
         <p class="section-subtitle">
-          Good projects begin with a real conversation and take shape one considered step at a time.
+          Leadership turns vision into action through strategic direction, technical innovation,
+          and operational excellence.
         </p>
       </div>
 
-      <div class="steps-grid">
-        <div class="tech-card reveal delay-1">
-          <div class="step-num-badge">01</div>
-          <h3>Share your idea</h3>
-          <p>Tell us what you want to build or the problem you want to solve.</p>
+      <div class="founders-grid">
+        <!-- Azad Bhasme -->
+        <div class="founder-card reveal delay-1">
+          <img
+            src="https://i.postimg.cc/FKR13TF0/Screenshot-2025-10-02-221211.png"
+            alt="Azad Bhasme"
+            class="founder-avatar"
+          />
+          <h3>Azad Bhasme</h3>
+          <div class="founder-role">Chief Executive Officer (CEO)</div>
+          <p>
+            Leading overall organisational vision, corporate strategy, business development, and
+            stakeholder relationships across the MVAPS &amp; Company ecosystem.
+          </p>
         </div>
 
-        <div class="tech-card reveal delay-2">
-          <div class="step-num-badge">02</div>
-          <h3>Discuss requirements</h3>
-          <p>We clarify scope, timeline, expectations, and a sensible way forward.</p>
+        <!-- Abhishek Giri -->
+        <div class="founder-card reveal delay-2">
+          <img
+            src="https://i.postimg.cc/j5bQsV4P/Screenshot-2025-10-02-214652.png"
+            alt="Abhishek Giri"
+            class="founder-avatar"
+          />
+          <h3>Abhishek Giri</h3>
+          <div class="founder-role">
+            Chief Marketing Officer (CMO) &amp; Chief Technology Officer (CTO)
+          </div>
+          <p>
+            Driving marketing and brand development, technology strategy, and software and product
+            innovation while leading technical execution for MVAPS Solutions.
+          </p>
         </div>
 
-        <div class="tech-card reveal delay-3">
-          <div class="step-num-badge">03</div>
-          <h3>Develop &amp; refine</h3>
-          <p>We design, build, test, and work through feedback together.</p>
+        <!-- Piyush Kurzekar -->
+        <div class="founder-card reveal delay-3">
+          <img
+            src="https://i.postimg.cc/SKWC1Tb9/Screenshot-2025-10-02-214828.png"
+            alt="Piyush Kurzekar"
+            class="founder-avatar"
+          />
+          <h3>Piyush Kurzekar</h3>
+          <div class="founder-role">
+            Chief Operating Officer (COO) &amp; Chief Financial Officer (CFO)
+          </div>
+          <p>
+            Managing operations, financial strategy, and organisational processes to ensure
+            sustainable growth and long-term efficiency.
+          </p>
         </div>
-
-        <div class="tech-card reveal delay-4">
-          <div class="step-num-badge">04</div>
-          <h3>Deliver &amp; support</h3>
-          <p>We hand over your completed solution and discuss applicable support.</p>
-        </div>
-      </div>
-
-      <div class="section-header reveal" style="margin-top: 72px;">
-        <span class="eyebrow">The Project Nest difference</span>
-        <h2 class="section-title">Expertise that keeps your goals in focus.</h2>
-        <p class="section-subtitle">
-          Clear expectations, careful execution, and an approachable team—at every stage of your project.
-        </p>
-      </div>
-
-      <div class="steps-grid">
-        <div class="tech-card reveal delay-1">
-          <div class="step-num-badge">01</div>
-          <h3>Made for your brief</h3>
-          <p>Every project starts with your goals, constraints, and context—not a one-size-fits-all package.</p>
-        </div>
-
-        <div class="tech-card reveal delay-2">
-          <div class="step-num-badge">02</div>
-          <h3>Clear conversations</h3>
-          <p>Understand the scope, trade-offs, and next steps before development gets underway.</p>
-        </div>
-
-        <div class="tech-card reveal delay-3">
-          <div class="step-num-badge">03</div>
-          <h3>Thoughtful technology</h3>
-          <p>We choose modern tools to suit the work, with quality-focused implementation.</p>
-        </div>
-
-        <div class="tech-card reveal delay-4">
-          <div class="step-num-badge">04</div>
-          <h3>Straightforward pricing</h3>
-          <p>Discuss a clear quotation shaped by your requirements, scope, and timeline.</p>
-        </div>
-      </div>
-
-      <div class="feature-pills-row reveal">
-        <span class="feature-pill">✦ Solutions shaped around your needs</span>
-        <span class="feature-pill">✦ Modern tools for practical outcomes</span>
-        <span class="feature-pill">✦ Clear project communication</span>
-        <span class="feature-pill">✦ Support options after delivery</span>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================================
-       Project Enquiry (#enquiry) — Linked Directly to mvapscompany@gmail.com
-       With Strict Email, Phone & Required Field Validation + Popup Warning
-       ========================================================================= -->
-  <section class="section section-alt" id="enquiry">
+  <!-- Culture, Future Direction & Looking Forward -->
+  <section class="section section-sand" id="culture">
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow">Project enquiry</span>
-        <h2 class="section-title">Let's talk about what you're building.</h2>
+        <span class="eyebrow">Culture &amp; Vision</span>
+        <h2 class="section-title">Building the Future, Together</h2>
         <p class="section-subtitle">
-          Share a few details about your idea and we’ll have a better starting point for discussing
-          scope, timeline, and a quotation.
+          Where ideas become customer-ready products—built with purpose, collaboration, and
+          accountability.
         </p>
       </div>
 
-      <div class="enquiry-card reveal">
-        <div class="enquiry-trust-bar">
-          <div class="trust-box">🔒 Your requirements stay private</div>
-          <div class="trust-box">🔖 A unique reference for your enquiry</div>
-          <div class="trust-box">⚡ Direct delivery to MVAPS &amp; Project Nest team</div>
+      <div class="culture-grid">
+        <div class="culture-card reveal delay-1">
+          <span class="card-tag">Our Culture</span>
+          <h3>How We Work</h3>
+          <ul class="culture-list">
+            <li>Collaboration across all business verticals</li>
+            <li>Continuous learning and ownership of responsibilities</li>
+            <li>Professional communication and ethical conduct</li>
+            <li>Innovation, experimentation, and quality-driven execution</li>
+          </ul>
         </div>
 
-        <p style="text-align: center; color: var(--slate-600); font-size: 0.94rem; margin-bottom: 28px;">
-          No project is too early to discuss. Tell us where you are, and we can take it from there.
-        </p>
+        <div class="culture-card reveal delay-2">
+          <span class="card-tag">Strategic Direction</span>
+          <h3>Future Horizons</h3>
+          <ul class="culture-list">
+            <li>Strengthening our core technology and software solutions</li>
+            <li>Advancing AI-powered products and client-focused platforms</li>
+            <li>Expanding the Solveitly educational platform and Infos Digital media</li>
+            <li>Growing our engineering and product delivery capabilities</li>
+          </ul>
+        </div>
 
+        <div class="culture-card reveal delay-3">
+          <span class="card-tag">Our Commitment</span>
+          <h3>Looking Forward</h3>
+          <ul class="culture-list">
+            <li>Build useful technology with clear accountability</li>
+            <li>Support enterprises, startups, students, and customers with practical solutions</li>
+            <li>Advance AI-powered products and intelligent automation</li>
+            <li>Keep learning, collaborating, and improving delivery quality</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section (Connected Directly to mvapscompany@gmail.com) -->
+  <section class="section section-ivory" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Connect With Us</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+          Have a software, AI, web, or mobile requirement for MVAPS Solutions, or want to
+          collaborate across our ecosystem? Fill out the inquiry form below and it will be sent
+          directly to our team.
+        </p>
+      </div>
+
+      <div class="contact-wrapper reveal">
+        <div class="contact-info">
+          <h3>Let's Turn Your Vision into a Practical Solution</h3>
+          <p>
+            Whether you are an enterprise, a growing startup, or a student looking to build through
+            <strong>Project Nest AI</strong>, we are ready to collaborate.
+          </p>
+
+          <div class="contact-detail-list">
+            <div class="contact-detail-item">
+              <strong>Headquarters</strong>
+              <span>Nagpur, Maharashtra, India</span>
+            </div>
+            <div class="contact-detail-item">
+              <strong>Established</strong>
+              <span>20 May 2024</span>
+            </div>
+            <div class="contact-detail-item">
+              <strong>Technology &amp; Delivery Arm</strong>
+              <span>MVAPS Solutions (Project Nest AI · SnapDocs AI · Summarizer AI)</span>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a
+              href="https://snapdocsaio.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-navy"
+            >
+              Launch SnapDocs AI ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Connected directly to mvapscompany@gmail.com -->
         <form
-          id="enquiryForm"
+          class="contact-form"
+          id="contactForm"
           action="https://formsubmit.co/mvapscompany@gmail.com"
           method="POST"
           novalidate
         >
           <!-- FormSubmit Configuration Fields -->
-          <input type="hidden" name="_subject" id="enquirySubject" value="New Project Enquiry — PROJECTNEST" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Customer Inquiry — MVAPS & Company Website"
+          />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="Enquiry_Reference_ID" id="enquiryRefId" value="" />
+          <!-- Honeypot field to block spam bots -->
           <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
 
-          <div class="form-grid-3">
+          <div class="form-row-two">
             <div class="form-group">
-              <label for="fullName">Full name *</label>
+              <label for="name">Customer Name *</label>
               <input
                 type="text"
-                id="fullName"
-                name="Full_Name"
+                id="name"
+                name="Customer_Name"
                 placeholder="Enter your full name"
-                autocomplete="name"
                 required
               />
-              <span id="nameErrorMsg" class="field-error-msg">
-                ⚠ Please enter your full name.
-              </span>
             </div>
 
             <div class="form-group">
-              <label for="email">Email address *</label>
+              <label for="email">Customer Email *</label>
               <input
                 type="email"
                 id="email"
@@ -1931,637 +2207,156 @@
                 ⚠ Please enter a valid email address (e.g., name@example.com).
               </span>
             </div>
+          </div>
 
+          <div class="form-row-two">
             <div class="form-group">
-              <label for="phone">Phone / WhatsApp *</label>
+              <label for="phone">Phone / WhatsApp Number</label>
               <input
                 type="tel"
                 id="phone"
-                name="Phone_WhatsApp"
-                placeholder="+91 98765 43210"
-                autocomplete="tel"
-                required
+                name="Phone_Number"
+                placeholder="+91 XXXXX XXXXX"
               />
-              <span id="phoneErrorMsg" class="field-error-msg">
-                ⚠ Please enter a valid 10-digit mobile number (e.g., +91 9876543210).
-              </span>
-            </div>
-          </div>
-
-          <div class="form-grid-3">
-            <div class="form-group">
-              <label for="customerType">I am a… *</label>
-              <select id="customerType" name="Customer_Type" required>
-                <option value="">Choose one</option>
-                <option value="Student">Student</option>
-                <option value="Professional">Professional</option>
-                <option value="Startup">Startup</option>
-                <option value="Business / Enterprise">Business / Enterprise</option>
-              </select>
             </div>
 
             <div class="form-group">
-              <label for="serviceSelect">Service required *</label>
-              <select id="serviceSelect" name="Service_Required" required>
-                <option value="">Choose a service</option>
-                <option value="Academic & Student Projects">Academic &amp; Student Projects</option>
-                <option value="AI & Machine Learning">AI &amp; Machine Learning</option>
-                <option value="Custom AI Agents">Custom AI Agents</option>
-                <option value="Website Development">Website Development</option>
-                <option value="Application Development">Application Development</option>
-                <option value="Business Automation">Business Automation</option>
-                <option value="Data Analytics & Visualization">Data Analytics &amp; Visualization</option>
-                <option value="UI/UX & Product Design">UI/UX &amp; Product Design</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="projectTitle">Project title *</label>
+              <label for="organization">Company / College / Organization</label>
               <input
                 type="text"
-                id="projectTitle"
-                name="Project_Title"
-                placeholder="Enter your project title"
-                required
+                id="organization"
+                name="Organization"
+                placeholder="Your company or institution"
               />
-            </div>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label for="budget">Budget range</label>
-              <select id="budget" name="Budget_Range">
-                <option value="Discuss based on scope">Discuss based on scope</option>
-                <option value="Student / Academic Project">Student / Academic Project</option>
-                <option value="Startup / MVP Build">Startup / MVP Build</option>
-                <option value="Business / Enterprise Solution">Business / Enterprise Solution</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="deliveryDate">Expected delivery date *</label>
-              <input type="date" id="deliveryDate" name="Expected_Delivery_Date" required />
             </div>
           </div>
 
           <div class="form-group">
-            <label for="description">Project description *</label>
+            <label for="inquiry">Inquiry Area *</label>
+            <select id="inquiry" name="Inquiry_Area" required>
+              <option value="Project Nest AI — Custom Web, Mobile, AI or Software Delivery">
+                Project Nest AI — Custom Web, Mobile, AI or Software Delivery
+              </option>
+              <option value="SnapDocs AI — Document Processing Platform">
+                SnapDocs AI — Document Processing Platform
+              </option>
+              <option value="Summarizer AI">Summarizer AI</option>
+              <option value="Solveitly (EdTech) / Infos Digital (Media)">
+                Solveitly (EdTech) / Infos Digital (Media)
+              </option>
+              <option value="General Corporate or Partnership Inquiry">
+                General Corporate or Partnership Inquiry
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Project Details / Message *</label>
             <textarea
-              id="description"
-              name="Project_Description"
+              id="message"
+              name="Customer_Message"
               rows="4"
-              placeholder="Tell us what you want to build, key features, or the problem you want to solve..."
+              placeholder="Tell us about your project requirements, timeline, or inquiry..."
               required
             ></textarea>
           </div>
 
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label for="referenceLink">Reference files / Drive or GitHub link</label>
-              <input
-                type="text"
-                id="referenceLink"
-                name="Reference_Files_Or_Links"
-                placeholder="Optional: Paste Google Drive, doc, or reference link"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="additional">Additional requirements</label>
-              <input
-                type="text"
-                id="additional"
-                name="Additional_Requirements"
-                placeholder="Documentation, preferred tech stack, etc."
-              />
-            </div>
-          </div>
-
-          <button type="submit" id="enquirySubmitBtn" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1rem;">
-            Submit Project Enquiry
+          <button type="submit" id="submitBtn" class="btn btn-gold" style="width: 100%;">
+            Send Inquiry
           </button>
 
-          <p style="font-size: 0.8rem; color: var(--slate-600); text-align: center; margin-top: 10px;">
-            By submitting, you agree that Project Nest may use your details to respond to this enquiry.
-          </p>
-
-          <div id="enquiryStatus" class="form-status" role="status" aria-live="polite"></div>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FAQs (#faq) -->
-  <section class="section section-light" id="faq">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">FAQs</span>
-        <h2 class="section-title">A few things you may be wondering.</h2>
-      </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item open">
-          <button type="button" class="faq-question">
-            <span>What services does Project Nest provide?</span>
-            <span class="faq-toggle-icon">−</span>
-          </button>
-          <div class="faq-answer">
-            We work across academic projects, AI and machine learning, AI agents, website and application development, automation, data analytics, and UI/UX design.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>Do you work with college students?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes! We provide thoughtful project guidance, clean implementation, and explanations that help students thoroughly understand what they build.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>Can I request a completely customized project?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes. Every project starts with your specific brief, goals, constraints, and context—not a one-size-fits-all package.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>Do you develop AI-powered applications?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes, we build practical, data-led AI &amp; Machine Learning solutions and custom AI agents for research, support, leads, and team workflows.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>Can you build websites for businesses?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes, we design and build distinctive, responsive websites and web applications engineered to move your business forward.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>Do you provide project documentation?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes, we provide clear technical documentation, setup instructions, and project reports tailored to your requirements.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>How is project pricing determined?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Pricing is shaped transparently by your project requirements, technical scope, and expected delivery timeline.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>How can I request a quotation?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Share your project details in the Project Enquiry form above and our team will review your brief and send a clear quotation.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>Do you provide post-delivery support?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes, we hand over your completed solution and provide applicable support options after delivery.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            <span>How do I get started?</span>
-            <span class="faq-toggle-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            Click "Start Your Project" or fill out the Project Enquiry form above to start the conversation.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Customer Experience (10 Sliding Reviews, No Company Names, 5.5s Slide) -->
-  <section class="section section-dark cyber-grid-bg" id="reviews">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">
-          <span class="tech-dot"></span>
-          Customer Stories &amp; Feedback
-        </span>
-        <h2 class="section-title">Our Customer Experience.</h2>
-        <p class="section-subtitle">
-          See how students, creators, and professionals experienced building their ideas with
-          Project Nest.
-        </p>
-      </div>
-
-      <div class="reviews-stage-wrap reveal" id="reviewsCarousel">
-        <div class="reviews-viewport">
-          <div class="reviews-track" id="reviewsTrack">
-
-            <!-- Review 1 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Academic &amp; Student Projects</span>
-                </div>
-                <p class="review-quote">
-                  “Project Nest helped me build and understand my final-year AI &amp; NLP project
-                  from scratch. They didn't just hand over code—they walked me through the entire
-                  architecture and logic so I could explain every detail with complete confidence.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">AD</div>
-                    <div class="review-author-meta">
-                      <h4>Aarav Deshmukh</h4>
-                      <span>Computer Science Student</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 2 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Custom AI Agents</span>
-                </div>
-                <p class="review-quote">
-                  “I needed a custom AI assistant to organize research notes and summarize long
-                  documents automatically. The team scoped the workflow clearly, delivered right on
-                  time, and made the whole tool effortless to use.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">PN</div>
-                    <div class="review-author-meta">
-                      <h4>Priya Nair</h4>
-                      <span>Startup Founder</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 3 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Business Automation</span>
-                </div>
-                <p class="review-quote">
-                  “We were spending hours every week moving data manually across spreadsheets and
-                  tools. Project Nest built a clean automated workflow that handles the routine steps
-                  instantly and saves us hours every single week.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">DM</div>
-                    <div class="review-author-meta">
-                      <h4>Daniel Mitchell</h4>
-                      <span>Operations Manager</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 4 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Application Development</span>
-                </div>
-                <p class="review-quote">
-                  “They turned my rough app concept into a fast, responsive web and mobile
-                  application. Every milestone was shared clearly, and the final product looked even
-                  better than what I had imagined.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">RK</div>
-                    <div class="review-author-meta">
-                      <h4>Rohan Kulkarni</h4>
-                      <span>Product Creator</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 5 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">AI &amp; Machine Learning</span>
-                </div>
-                <p class="review-quote">
-                  “For my postgraduate machine learning project, the team helped me structure the
-                  dataset pipeline, train and evaluate the model properly, and prepare crystal-clear
-                  technical documentation. Truly supportive and patient guidance.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">SI</div>
-                    <div class="review-author-meta">
-                      <h4>Sneha Iyer</h4>
-                      <span>Postgraduate Researcher</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 6 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">UI/UX &amp; Product Design</span>
-                </div>
-                <p class="review-quote">
-                  “I came in with a rough idea on paper and left with a sleek, interactive prototype
-                  and modern front-end interface. Their attention to detail, animations, and user
-                  flow made the entire experience seamless.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">SL</div>
-                    <div class="review-author-meta">
-                      <h4>Sophie Lindqvist</h4>
-                      <span>Product Designer</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 7 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Website Development</span>
-                </div>
-                <p class="review-quote">
-                  “Project Nest designed and built a clean, modern website that loads fast on both
-                  mobile and desktop. The communication was straightforward from day one and every
-                  update I requested was handled quickly.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">VJ</div>
-                    <div class="review-author-meta">
-                      <h4>Vikramaditya Joshi</h4>
-                      <span>Business Owner</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 8 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Data Analytics &amp; Visualization</span>
-                </div>
-                <p class="review-quote">
-                  “They transformed our raw spreadsheets into an interactive visual dashboard where
-                  we can track key metrics at a glance. Everything is clean, intuitive, and easy to
-                  filter in real time.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">AC</div>
-                    <div class="review-author-meta">
-                      <h4>Ananya Chatterjee</h4>
-                      <span>Data &amp; Strategy Analyst</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 9 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Custom AI Agents</span>
-                </div>
-                <p class="review-quote">
-                  “The custom AI assistant they built handles visitor questions smoothly and keeps
-                  conversations organized 24/7. Clean engineering, practical advice, and zero
-                  unnecessary complexity.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">MV</div>
-                    <div class="review-author-meta">
-                      <h4>Marcus Vance</h4>
-                      <span>Digital Consultant</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-            <!-- Review 10 -->
-            <div class="review-slide">
-              <div class="review-card">
-                <div class="review-top-row">
-                  <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <span class="review-service-pill">Academic &amp; Student Projects</span>
-                </div>
-                <p class="review-quote">
-                  “We were stuck connecting our hardware sensor data to a live web dashboard and
-                  prediction model. Project Nest guided us step by step, fixed the bottlenecks, and
-                  helped us complete our project ahead of the deadline.”
-                </p>
-                <div class="review-author-row">
-                  <div class="review-author-left">
-                    <div class="review-avatar">KS</div>
-                    <div class="review-author-meta">
-                      <h4>Karthik Subramanian</h4>
-                      <span>Final-Year Engineering Student</span>
-                    </div>
-                  </div>
-                  <span class="review-verified">✓ Great Experience</span>
-                </div>
-                <div class="review-progress-bar"></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Carousel Pagination Dots & Prev/Next Controls -->
-        <div class="reviews-controls-bar">
-          <div class="reviews-dots" id="reviewsDots" aria-label="Review Slide Indicators"></div>
-          <div class="reviews-nav-btns">
-            <button type="button" class="review-arrow-btn" id="prevReviewBtn" aria-label="Previous Review">←</button>
-            <button type="button" class="review-arrow-btn" id="nextReviewBtn" aria-label="Next Review">→</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Your Next Step CTA Banner -->
-  <section class="cta-banner">
-    <div class="container reveal">
-      <span class="eyebrow" style="color: var(--cyan-400); background: rgba(6, 182, 212, 0.14); border-color: rgba(34, 211, 238, 0.3);">
-        Your next step
-      </span>
-      <h2>Your Ideas. Our Expertise. Real Solutions.</h2>
-      <p>Let's make room for what you want to build.</p>
-      <a href="#enquiry" class="btn btn-primary">Start Your Project</a>
-    </div>
-  </section>
-
-  <!-- Warning / Info Popup Modal -->
-  <div class="modal-overlay" id="popupModal" role="alertdialog" aria-modal="true">
-    <div class="modal-box" id="modalBox">
-      <div class="modal-icon" id="modalIcon">!</div>
-      <h4 id="modalTitle">Invalid Input</h4>
-      <p id="modalDesc">Please check your details and try again.</p>
-      <button type="button" id="closeModalBtn" class="btn btn-dark" style="width: 100%;">
-        OK
+  <!-- Invalid Email Warning Popup Modal -->
+  <div
+    class="modal-overlay"
+    id="emailWarningModal"
+    role="alertdialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-describedby="modalDesc"
+  >
+    <div class="modal-box">
+      <div class="modal-icon">!</div>
+      <h4 id="modalTitle">Invalid Email Address</h4>
+      <p id="modalDesc">
+        Please enter a valid email address format (for example,
+        <strong>yourname@gmail.com</strong> or <strong>name@company.com</strong>) so our team can
+        reply to your inquiry.
+      </p>
+      <button type="button" id="closeModalBtn" class="btn btn-navy" style="width: 100%;">
+        OK, Enter Valid Email
       </button>
     </div>
   </div>
 
-  <!-- Footer with Custom Neural Hex-Nest SVG Logo -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="#home" class="brand" style="margin-bottom: 14px;">
-            <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon
-                points="24,3 43,13.5 43,34.5 24,45 5,34.5 5,13.5"
-                fill="rgba(11, 19, 37, 0.9)"
-                stroke="url(#nestOuterGrad)"
-                stroke-width="2.4"
-              />
-              <path
-                d="M24 10L36 17V31L24 38L12 31V17L24 10Z"
-                stroke="url(#nestInnerGrad)"
-                stroke-width="1.6"
-                stroke-opacity="0.75"
-              />
-              <path
-                d="M12 17L24 24L36 17M24 24V38"
-                stroke="#22d3ee"
-                stroke-width="1.6"
-                stroke-linecap="round"
-              />
-              <circle cx="24" cy="10" r="2.3" fill="#22d3ee" />
-              <circle cx="36" cy="17" r="2.3" fill="#38bdf8" />
-              <circle cx="36" cy="31" r="2.3" fill="#60a5fa" />
-              <circle cx="24" cy="38" r="2.3" fill="#22d3ee" />
-              <circle cx="12" cy="31" r="2.3" fill="#60a5fa" />
-              <circle cx="12" cy="17" r="2.3" fill="#38bdf8" />
-              <circle cx="24" cy="24" r="4.2" fill="url(#nestOuterGrad)" />
-              <circle cx="24" cy="24" r="2" fill="#ffffff" />
-            </svg>
-            <div class="brand-text-wrap">
-              <span class="brand-title">PROJECTNEST</span>
-              <span class="brand-sub">Digital &amp; AI Solutions</span>
-            </div>
+          <a href="#home" class="brand footer-brand">
+            <img
+              src="https://i.postimg.cc/RZYgxbY3/Screenshot-2025-09-27-114254.png"
+              alt="MVAPS & Company Logo"
+            />
+            <span style="color: #fff;">MVAPS <span class="gold">&amp; Company</span></span>
           </a>
-          <p style="font-size: 0.92rem; margin-bottom: 8px;">
-            Turning Ideas Into Intelligent Digital Solutions.
+          <p style="font-size: 0.9rem; margin-bottom: 12px;">
+            Parent organisation established 20 May 2024 in Nagpur, Maharashtra, India. Building an
+            innovative and sustainable business ecosystem.
           </p>
-          <p style="font-size: 0.85rem; color: var(--cyan-400); font-weight: 600;">
-            Your Ideas. Our Expertise. Real Solutions.
+          <p style="font-size: 0.84rem; color: var(--gold-400); font-weight: 600;">
+            Empowering Ideas, Inspiring Solutions.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>Navigation</h4>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#work">Portfolio</a></li>
-            <li><a href="#reviews">Customer Reviews</a></li>
-            <li><a href="#enquiry">Project Enquiry</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#foundation">Foundation &amp; Journey</a></li>
+            <li><a href="#ecosystem">Ecosystem</a></li>
+            <li><a href="#solutions">MVAPS Solutions</a></li>
+            <li><a href="#leadership">Leadership</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>What we do</h4>
+          <h4>Business Verticals</h4>
           <ul>
-            <li><a href="#services">Academic Projects</a></li>
-            <li><a href="#services">AI &amp; Machine Learning</a></li>
-            <li><a href="#services">AI Agents</a></li>
-            <li><a href="#services">Website &amp; App Development</a></li>
-            <li><a href="#services">Automation &amp; Analytics</a></li>
+            <li><a href="#solutions">MVAPS Solutions (IT &amp; Tech)</a></li>
+            <li><a href="#products">Solveitly (Coming Soon)</a></li>
+            <li><a href="#products">Infos Digital (Coming Soon)</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Start a conversation</h4>
-          <p style="font-size: 0.88rem; margin-bottom: 14px;">
-            Have an idea in mind? Tell us a little about it.
-          </p>
-          <a href="#enquiry" class="btn btn-primary btn-sm">Talk with our team</a>
+          <h4>Products &amp; Delivery</h4>
+          <ul>
+            <li><a href="#solutions">Project Nest AI</a></li>
+            <li>
+              <a
+                href="https://snapdocsaio.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Launch SnapDocs AI ↗
+              </a>
+            </li>
+            <li><a href="#products">Summarizer AI (Coming Soon)</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 PROJECT NEST. All rights reserved.</span>
-        <span>Powered by MVAPS Solutions · MVAPS &amp; Company</span>
+        <span>&copy; 2024–2026 MVAPS &amp; Company. All Rights Reserved.</span>
+        <span>Nagpur, Maharashtra, India · Technology with purpose, built together.</span>
       </div>
     </div>
   </footer>
@@ -2572,1101 +2367,99 @@
     // =========================================================================
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach((link) =>
-      link.addEventListener('click', () => navLinks.classList.remove('open'))
-    );
 
-    // =========================================================================
-    // 2. Interactive Tech Neural Network Particle Canvas in Hero
-    // =========================================================================
-    const canvas = document.getElementById('techCanvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    const mouse = { x: null, y: null, radius: 130 };
-
-    function resizeCanvas() {
-      canvas.width = canvas.parentElement.offsetWidth;
-      canvas.height = canvas.parentElement.offsetHeight;
-    }
-
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    window.addEventListener('mousemove', (e) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
     });
 
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.65;
-        this.vy = (Math.random() - 0.5) * 0.65;
-        this.size = Math.random() * 2 + 1;
-      }
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(34, 211, 238, 0.65)';
-        ctx.fill();
-      }
-    }
-
-    function initParticles() {
-      particles = [];
-      const count = Math.min(55, Math.floor((canvas.width * canvas.height) / 18000));
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-      }
-    }
-    initParticles();
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 135) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(56, 189, 248, ${0.22 * (1 - dist / 135)})`;
-            ctx.lineWidth = 1;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-        if (mouse.x !== null && mouse.y !== null) {
-          const mdx = particles[i].x - mouse.x;
-          const mdy = particles[i].y - mouse.y;
-          const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
-          if (mDist < mouse.radius) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(34, 211, 238, ${0.45 * (1 - mDist / mouse.radius)})`;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(animateParticles);
-    }
-    animateParticles();
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
 
     // =========================================================================
-    // 3. Slower Scroll-Up & Scroll-Down Reveal Animation Observer
+    // 2. Slower Scroll-Reveal Animation (Triggers on Scroll Down AND Scroll Up)
     // =========================================================================
+    const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
           } else {
+            // Reset when element leaves viewport so scrolling back up re-plays
+            // the slow, smooth reveal animation.
             entry.target.classList.remove('is-visible');
           }
         });
       },
-      { threshold: 0.08, rootMargin: '-20px 0px -20px 0px' }
+      {
+        threshold: 0.08,
+        rootMargin: '-20px 0px -20px 0px',
+      }
     );
 
-    function observeReveals(root = document) {
-      root.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
-    }
-    observeReveals();
+    revealElements.forEach((el) => revealObserver.observe(el));
 
     // =========================================================================
-    // 4. Portfolio Projects Data (10 Per Category + Featured Combined in All Work)
-    // =========================================================================
-    const PORTFOLIO_PROJECTS = [
-      // ---------------- AI Projects ----------------
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Research Discovery Assistant',
-        desc: 'Organizes academic literature, extracts key themes, and supports structured research synthesis.',
-        tags: ['Python', 'NLP', 'LLM'],
-        top: true,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Medical Imaging Anomaly Detector',
-        desc: 'Deep learning vision pipeline that highlights potential anomalies in diagnostic X-ray and MRI scans.',
-        tags: ['PyTorch', 'CNN', 'OpenCV'],
-        top: true,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Multilingual Voice-to-Notes Engine',
-        desc: 'Transcribes regional and English audio lectures into structured, searchable study and meeting notes.',
-        tags: ['Whisper', 'Python', 'FastAPI'],
-        top: false,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Smart Crop Disease Classifier',
-        desc: 'Leaf-image recognition model identifying plant diseases early with actionable treatment guidance.',
-        tags: ['TensorFlow', 'MobileNet', 'Flask'],
-        top: false,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Real-Time Sentiment & Brand Monitor',
-        desc: 'NLP stream processor that classifies customer feedback and product reviews by emotion and urgency.',
-        tags: ['BERT', 'Python', 'Streamlit'],
-        top: false,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Intelligent Resume & Skill Matcher',
-        desc: 'Semantic ranking engine matching candidate resumes against job descriptions with skill-gap scoring.',
-        tags: ['Embeddings', 'spaCy', 'React'],
-        top: false,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Predictive Equipment Maintenance AI',
-        desc: 'Time-series anomaly model forecasting machine wear and failure windows from industrial sensor logs.',
-        tags: ['Scikit-Learn', 'LSTM', 'Python'],
-        top: false,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Automated Contract Clause Analyzer',
-        desc: 'Extracts obligations, renewal dates, and risk clauses from lengthy legal PDFs with citation links.',
-        tags: ['RAG', 'LangChain', 'OCR'],
-        top: false,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Retail Demand Forecasting Engine',
-        desc: 'Predicts SKU-level inventory demand across seasonal cycles to reduce stockouts and overstocking.',
-        tags: ['XGBoost', 'Prophet', 'SQL'],
-        top: false,
-      },
-      {
-        category: 'AI Projects',
-        serviceMap: 'AI & Machine Learning',
-        title: 'Handwritten Exam Sheet Evaluator',
-        desc: 'OCR and semantic grading assistant that digitizes handwritten answers and assists rubric scoring.',
-        tags: ['Vision AI', 'OCR', 'Python'],
-        top: false,
-      },
-
-      // ---------------- Agentic AI ----------------
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'Autonomous Lead Qualification Agent',
-        desc: 'Engages website visitors, answers product questions, qualifies intent, and books calendar discovery calls.',
-        tags: ['Agentic AI', 'Function Calling', 'CRM'],
-        top: true,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'Multi-Agent Code Review & QA Copilot',
-        desc: 'Coordinated AI agents that inspect pull requests for security flaws, style issues, and missing unit tests.',
-        tags: ['Multi-Agent', 'LangGraph', 'Git API'],
-        top: true,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: '24/7 Customer Support Triage Agent',
-        desc: 'Resolves tier-1 queries from knowledge bases and escalates complex tickets with full context summaries.',
-        tags: ['RAG Agent', 'Vector DB', 'Webhooks'],
-        top: false,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'Deep Market & Competitor Research Agent',
-        desc: 'Autonomously browses public sources, compiles pricing matrices, and drafts weekly executive briefings.',
-        tags: ['Autonomous Agent', 'Python', 'Search API'],
-        top: false,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'Personal Academic Study & Viva Coach',
-        desc: 'Interactive tutor agent that quizzes students on their syllabus and simulates viva-voce questioning.',
-        tags: ['LLM Agent', 'Memory', 'Next.js'],
-        top: false,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'Automated SQL & Data Analyst Agent',
-        desc: 'Translates plain-English business questions into safe SQL queries and generates instant chart explanations.',
-        tags: ['Text-to-SQL', 'Tool Use', 'PostgreSQL'],
-        top: false,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'SOP & Internal Wiki Knowledge Navigator',
-        desc: 'Answers employee operational questions with exact paragraph citations from internal policy documents.',
-        tags: ['Hybrid Search', 'AI Agent', 'FastAPI'],
-        top: false,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'E-Commerce Personal Shopping Concierge',
-        desc: 'Conversational agent that recommends products based on budget, style, and real-time stock availability.',
-        tags: ['Recommender Agent', 'React', 'Node.js'],
-        top: false,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'Meeting Action-Item & Follow-Up Agent',
-        desc: 'Listens to meeting transcripts, assigns owners to action items, and drafts follow-up emails automatically.',
-        tags: ['Workflow Agent', 'Audio AI', 'REST API'],
-        top: false,
-      },
-      {
-        category: 'Agentic AI',
-        serviceMap: 'Custom AI Agents',
-        title: 'Supply Chain Exception Handler Agent',
-        desc: 'Monitors shipment delays, evaluates alternate routes, and alerts procurement teams with recovery options.',
-        tags: ['Decision Agent', 'Python', 'Alerts'],
-        top: false,
-      },
-
-      // ---------------- Websites ----------------
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'Small Business Digital Home',
-        desc: 'Responsive website architecture that makes a service brand easier to discover, understand, and contact.',
-        tags: ['React', 'TypeScript', 'Tailwind'],
-        top: true,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'SaaS Product Launch & Pricing Hub',
-        desc: 'High-converting software landing experience with interactive feature tours and dynamic pricing toggles.',
-        tags: ['Next.js', 'Framer Motion', 'SEO'],
-        top: true,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'EdTech Course & Cohort Portal',
-        desc: 'Modern educational website featuring curriculum breakdowns, mentor profiles, and student enrollment flows.',
-        tags: ['React', 'Tailwind CSS', 'CMS'],
-        top: false,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'Architecture & Interior Showcase Studio',
-        desc: 'Visual-first portfolio website with smooth gallery filtering, project timelines, and consultation booking.',
-        tags: ['HTML5', 'CSS Grid', 'JavaScript'],
-        top: false,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'Healthcare Clinic & Appointment Website',
-        desc: 'Accessible medical practice website with specialist directories, service guides, and slot requests.',
-        tags: ['Responsive UI', 'Accessibility', 'React'],
-        top: false,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'Developer & Researcher Personal Portfolio',
-        desc: 'Clean academic and engineering portfolio showcasing publications, GitHub repositories, and live demos.',
-        tags: ['Astro', 'Markdown', 'Tailwind'],
-        top: false,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'B2B Industrial & Export Catalog Site',
-        desc: 'Structured product specification catalog with downloadable data sheets and RFQ inquiry forms.',
-        tags: ['Next.js', 'Search Filter', 'SEO'],
-        top: false,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'Real Estate Property Listing Showcase',
-        desc: 'Interactive property discovery website with neighborhood filters, floor plans, and virtual tour embeds.',
-        tags: ['React', 'Maps UI', 'Tailwind'],
-        top: false,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'Restaurant & Cloud Kitchen Ordering Site',
-        desc: 'Fast mobile-friendly menu website with dietary filters, combo builders, and direct WhatsApp checkout.',
-        tags: ['JavaScript', 'PWA', 'Fast UI'],
-        top: false,
-      },
-      {
-        category: 'Websites',
-        serviceMap: 'Website Development',
-        title: 'Tech Conference & Hackathon Microsite',
-        desc: 'Event website with speaker lineups, live schedule tracks, countdown timers, and team registration.',
-        tags: ['React', 'Animations', 'Responsive'],
-        top: false,
-      },
-
-      // ---------------- Applications ----------------
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Connected Fieldwork App',
-        desc: 'Cross-platform application for distributed teams coordinating updates, tasks, and shared records on the move.',
-        tags: ['React', 'Mobile', 'Cloud Data'],
-        top: true,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Telemedicine & Patient Health Tracker',
-        desc: 'Secure web and mobile app for digital prescriptions, symptom logs, and video consultation scheduling.',
-        tags: ['React Native', 'Node.js', 'PostgreSQL'],
-        top: true,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Multi-Vendor Hyperlocal Delivery App',
-        desc: 'Order management application connecting local stores, delivery partners, and customers with live status.',
-        tags: ['Flutter', 'Firebase', 'Maps API'],
-        top: false,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Smart Expense & Split-Bill Companion',
-        desc: 'Personal and group finance app with receipt scanning, category budgets, and instant settlement tracking.',
-        tags: ['React Native', 'TypeScript', 'SQLite'],
-        top: false,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Collaborative Kanban & Sprint Workspace',
-        desc: 'Real-time team productivity web app with drag-and-drop boards, milestone tracking, and time logs.',
-        tags: ['React', 'WebSockets', 'Express'],
-        top: false,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Fitness & Custom Workout Planner App',
-        desc: 'Mobile health application with routine builders, rep counters, and weekly progress visualizations.',
-        tags: ['Flutter', 'Dart', 'REST API'],
-        top: false,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Inventory & Barcode POS Web Application',
-        desc: 'Cloud point-of-sale and stock management application with low-inventory alerts and invoice generation.',
-        tags: ['React', 'Node.js', 'MongoDB'],
-        top: false,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Campus Event & Club Management App',
-        desc: 'Student community application for discovering college fests, RSVPing with QR passes, and club updates.',
-        tags: ['React Native', 'Supabase', 'QR Auth'],
-        top: false,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'EV Charging Station Finder & Slot App',
-        desc: 'Location-aware utility app displaying compatible EV chargers, availability status, and trip routing.',
-        tags: ['Mobile App', 'Geolocation', 'APIs'],
-        top: false,
-      },
-      {
-        category: 'Applications',
-        serviceMap: 'Application Development',
-        title: 'Secure Document Vault & E-Sign Portal',
-        desc: 'Role-based web application for uploading, watermarking, and approving confidential project documents.',
-        tags: ['Next.js', 'Auth', 'Cloud Storage'],
-        top: false,
-      },
-
-      // ---------------- Data Analytics ----------------
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'Operations Insight Dashboard',
-        desc: 'Executive dashboard bringing operational signals and KPIs into a concise, decision-friendly overview.',
-        tags: ['Power BI', 'SQL', 'Excel'],
-        top: true,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'Sales & Revenue Cohort Analytics Hub',
-        desc: 'Tracks customer retention, regional revenue growth, and product margins with interactive drill-downs.',
-        tags: ['Python', 'Plotly', 'PostgreSQL'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'Supply Chain & Lead-Time Visualizer',
-        desc: 'Identifies vendor bottlenecks, transit delays, and warehouse turnover rates across distribution hubs.',
-        tags: ['Power BI', 'DAX', 'Data Modeling'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'Marketing Attribution & Funnel Tracker',
-        desc: 'Unifies ad spend, conversion funnels, and customer acquisition cost metrics into a single live view.',
-        tags: ['Looker Studio', 'SQL', 'Analytics'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'Healthcare Patient Flow & Bed Utilization',
-        desc: 'Visualizes outpatient wait times, department load, and resource allocation for administrators.',
-        tags: ['Tableau', 'Python', 'Pandas'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'Financial Cash-Flow & Runway Forecaster',
-        desc: 'Interactive financial model projecting burn rate, receivables, and scenario-based budget allocations.',
-        tags: ['Excel Macros', 'Power BI', 'Finance'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'EdTech Student Engagement & Score Analytics',
-        desc: 'Analyzes course completion rates, quiz performance trends, and topic-level difficulty heatmaps.',
-        tags: ['Python', 'Streamlit', 'Chart.js'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'E-Commerce Cart Abandonment & Basket Analysis',
-        desc: 'Uncovers frequently co-purchased items and checkout drop-off stages using association rule mining.',
-        tags: ['Python', 'SQL', 'Seaborn'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'Energy Consumption & Solar Yield Monitor',
-        desc: 'Tracks kilowatt-hour usage patterns, peak load anomalies, and renewable generation efficiency.',
-        tags: ['Time-Series', 'Grafana', 'SQL'],
-        top: false,
-      },
-      {
-        category: 'Data Analytics',
-        serviceMap: 'Data Analytics & Visualization',
-        title: 'HR Attrition & Workforce Productivity View',
-        desc: 'Highlights hiring pipeline velocity, department tenure trends, and training completion metrics.',
-        tags: ['Power BI', 'SQL', 'HR Analytics'],
-        top: false,
-      },
-
-      // ---------------- Academic Projects ----------------
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Student Project Companion',
-        desc: 'Learning-first full-stack project architecture explaining milestones, technical choices, and clean code.',
-        tags: ['Python', 'FastAPI', 'PostgreSQL'],
-        top: true,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'IoT Smart Agriculture & Irrigation System',
-        desc: 'Sensor-driven soil moisture and weather monitoring setup with cloud dashboard and automated pump control.',
-        tags: ['ESP32', 'IoT', 'React Dashboard'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Blockchain Certificate Verification Portal',
-        desc: 'Tamper-evident academic credential issuance and instant QR verification system for universities.',
-        tags: ['Solidity', 'Web3.js', 'React'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Fake News & Misinformation Classifier',
-        desc: 'Final-year NLP project comparing transformer and classical ML models on news credibility datasets.',
-        tags: ['Python', 'Scikit-Learn', 'NLP'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Smart Traffic Density & Signal Optimizer',
-        desc: 'Computer vision capstone that counts lane vehicles from camera feeds to adjust green-light durations.',
-        tags: ['YOLOv8', 'OpenCV', 'Python'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Cloud E-Learning & Live Coding Lab',
-        desc: 'Full-stack academic portal with video modules, browser-based code execution, and automated test cases.',
-        tags: ['MERN Stack', 'Docker', 'Judge0 API'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Driver Drowsiness & Alertness Detection',
-        desc: 'Real-time eye-aspect-ratio and yawn detection system triggering audio alerts for road safety research.',
-        tags: ['OpenCV', 'MediaPipe', 'Python'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Hospital Blood Bank & Donor Matcher',
-        desc: 'Database management project connecting blood banks, emergency requests, and nearby compatible donors.',
-        tags: ['Java / Spring', 'MySQL', 'Bootstrap'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Network Intrusion Detection System (NIDS)',
-        desc: 'Cybersecurity capstone analyzing packet traffic features to classify DDoS and port-scan anomalies.',
-        tags: ['Python', 'Random Forest', 'Cybersecurity'],
-        top: false,
-      },
-      {
-        category: 'Academic Projects',
-        serviceMap: 'Academic & Student Projects',
-        title: 'Sign Language to Speech Translator',
-        desc: 'Hand-gesture recognition model converting sign alphabets and phrases into real-time spoken audio.',
-        tags: ['TensorFlow', 'MediaPipe', 'TTS'],
-        top: false,
-      },
-
-      // ---------------- Automation ----------------
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Service Desk Automation',
-        desc: 'Automated workflow that classifies and routes incoming requests while keeping a clear human review step.',
-        tags: ['APIs', 'Automation', 'CRM'],
-        top: true,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Automated Invoice OCR & ERP Sync',
-        desc: 'Extracts line items and tax totals from vendor PDFs and pushes validated entries directly into accounting.',
-        tags: ['Python', 'OCR', 'Webhook API'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'WhatsApp & Email Order Status Notifier',
-        desc: 'Event-driven messaging pipeline sending instant payment, dispatch, and delivery updates to customers.',
-        tags: ['Node.js', 'WhatsApp API', 'Cron'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Multi-Channel Lead Capture & CRM Router',
-        desc: 'Consolidates leads from web forms, ads, and spreadsheets with automatic deduplication and owner assignment.',
-        tags: ['REST APIs', 'Webhooks', 'Automation'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Automated Employee Onboarding Pipeline',
-        desc: 'Generates offer letters, provisions workspace accounts, and schedules orientation checklists in one click.',
-        tags: ['Python', 'Workspace API', 'Workflow'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Scheduled Financial & KPI Report Mailer',
-        desc: 'Pulls nightly database metrics, compiles clean PDF/Excel summaries, and emails stakeholders every morning.',
-        tags: ['Python', 'Pandas', 'SMTP'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'E-Commerce Price & Stock Sync Engine',
-        desc: 'Keeps product inventory counts and pricing synchronized across multiple storefronts in real time.',
-        tags: ['GraphQL', 'REST API', 'Queue'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Appointment Reminder & No-Show Reducer',
-        desc: 'Sends timed confirmation prompts and one-click rescheduling links to keep service calendars full.',
-        tags: ['Calendar API', 'SMS/WhatsApp', 'Node.js'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Cloud Backup & Log Archival Orchestrator',
-        desc: 'Automated DevOps script verifying database snapshots, compressing logs, and alerting on storage thresholds.',
-        tags: ['Bash', 'Python', 'Cloud Storage'],
-        top: false,
-      },
-      {
-        category: 'Automation',
-        serviceMap: 'Business Automation',
-        title: 'Social & Content Publishing Scheduler',
-        desc: 'Formats approved marketing posts, attaches media assets, and publishes across channels on schedule.',
-        tags: ['APIs', 'Scheduler', 'TypeScript'],
-        top: false,
-      },
-
-      // ---------------- UI/UX Design ----------------
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'Fintech Wealth & Portfolio Design System',
-        desc: 'High-clarity dark and light mode design system for investment tracking, asset cards, and trade flows.',
-        tags: ['Figma', 'Design System', 'Prototyping'],
-        top: true,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'AI Copilot Workspace Interface Concept',
-        desc: 'Human-centered conversational UI combining side-by-side document editing, prompt history, and citations.',
-        tags: ['UX Research', 'Figma', 'AI UX'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'Healthcare Patient Portal UX Redesign',
-        desc: 'Accessible, senior-friendly interface simplifying lab report reading and doctor appointment booking.',
-        tags: ['Accessibility', 'Wireframing', 'User Flows'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'EdTech Gamified Learning Mobile UI',
-        desc: 'Engaging student experience with streak milestones, interactive quiz cards, and bite-sized lesson paths.',
-        tags: ['Mobile UX', 'Interactive Prototype', 'Figma'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'B2B Logistics Fleet Command Dashboard',
-        desc: 'Information-dense yet clean control center for live map tracking, route alerts, and driver dispatch.',
-        tags: ['Dashboard UX', 'Data Viz UI', 'Figma'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'D2C Fashion & Quick-Checkout App Flow',
-        desc: 'Frictionless mobile shopping journey reducing cart steps from five screens down to a single sheet.',
-        tags: ['Conversion UX', 'Mobile Design', 'UI Kit'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'Smart Home & IoT Device Controller UI',
-        desc: 'Tactile glassmorphic mobile interface for room climate dials, energy graphs, and scene automation.',
-        tags: ['Visual Design', 'Micro-Interactions', 'Figma'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'SaaS Onboarding & Empty-State Experience',
-        desc: 'Guided product walkthroughs and interactive checklists designed to boost first-session activation.',
-        tags: ['Product Design', 'User Journey', 'Prototyping'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'Travel Itinerary & Collaborative Planner UI',
-        desc: 'Visual trip board allowing friends to vote on stays, drag day schedules, and split group budgets.',
-        tags: ['Web & Mobile UI', 'Component Library', 'UX'],
-        top: false,
-      },
-      {
-        category: 'UI/UX Design',
-        serviceMap: 'UI/UX & Product Design',
-        title: 'Creator Analytics & Monetization Studio',
-        desc: 'Clean creator dashboard highlighting audience retention curves, payout timelines, and content performance.',
-        tags: ['Creator UX', 'Design Tokens', 'Figma'],
-        top: false,
-      },
-    ];
-
-    const workGrid = document.getElementById('workGrid');
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const workSearch = document.getElementById('workSearch');
-    const serviceSelect = document.getElementById('serviceSelect');
-    const projectTitleInput = document.getElementById('projectTitle');
-
-    let activeCategory = 'all';
-
-    function renderPortfolioCards() {
-      const query = workSearch.value.trim().toLowerCase();
-
-      const filtered = PORTFOLIO_PROJECTS.filter((item) => {
-        const matchesQuery =
-          !query ||
-          item.title.toLowerCase().includes(query) ||
-          item.desc.toLowerCase().includes(query) ||
-          item.category.toLowerCase().includes(query) ||
-          item.tags.some((t) => t.toLowerCase().includes(query));
-
-        if (!matchesQuery) return false;
-
-        if (activeCategory === 'all') {
-          if (query) return true;
-          return item.top === true;
-        }
-
-        return item.category === activeCategory;
-      });
-
-      workGrid.innerHTML = filtered
-        .map(
-          (item) => `
-        <div class="work-card reveal is-visible">
-          <div>
-            <div class="work-top-meta">
-              <span class="category-badge">${item.category}</span>
-            </div>
-            <h3>${item.title}</h3>
-            <p>${item.desc}</p>
-          </div>
-          <div>
-            <div class="tech-tags">
-              ${item.tags.map((t) => `<span class="tech-tag">${t}</span>`).join('')}
-            </div>
-            <div class="work-footer-row">
-              <span class="work-footer-note">Custom digital solution</span>
-              <button
-                type="button"
-                class="work-enquire-link"
-                data-title="${item.title}"
-                data-service="${item.serviceMap}"
-              >
-                Build similar →
-              </button>
-            </div>
-          </div>
-        </div>
-      `
-        )
-        .join('');
-
-      workGrid.querySelectorAll('.work-enquire-link').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const title = btn.getAttribute('data-title');
-          const mappedService = btn.getAttribute('data-service');
-          if (serviceSelect && mappedService) {
-            serviceSelect.value = mappedService;
-          }
-          if (projectTitleInput && title) {
-            projectTitleInput.value = title;
-          }
-          document.getElementById('enquiry').scrollIntoView({ behavior: 'smooth' });
-        });
-      });
-    }
-
-    filterButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeCategory = btn.getAttribute('data-category');
-        renderPortfolioCards();
-      });
-    });
-
-    workSearch.addEventListener('input', renderPortfolioCards);
-    renderPortfolioCards();
-
-    // =========================================================================
-    // 5. Service "Get a quote" & "Learn more" Buttons
-    // =========================================================================
-    document.querySelectorAll('.quote-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const service = btn.getAttribute('data-service');
-        if (serviceSelect && service) {
-          serviceSelect.value = service;
-        }
-        document.getElementById('enquiry').scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    const popupModal = document.getElementById('popupModal');
-    const modalBox = document.getElementById('modalBox');
-    const modalIcon = document.getElementById('modalIcon');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    let fieldToFocus = null;
-
-    document.querySelectorAll('.learn-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const title = btn.getAttribute('data-service');
-        const detail = btn.getAttribute('data-detail');
-        modalBox.classList.add('info-mode');
-        modalIcon.style.display = 'none';
-        modalTitle.textContent = title;
-        modalDesc.textContent = detail;
-        fieldToFocus = null;
-        popupModal.classList.add('active');
-      });
-    });
-
-    // =========================================================================
-    // 6. FAQ Accordion
-    // =========================================================================
-    document.querySelectorAll('.faq-question').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const icon = btn.querySelector('.faq-toggle-icon');
-        const isOpen = item.classList.contains('open');
-        item.classList.toggle('open');
-        icon.textContent = isOpen ? '+' : '−';
-      });
-    });
-
-    // =========================================================================
-    // 7. Customer Reviews Auto-Slider (Slides in from right every 5.5 seconds)
-    // =========================================================================
-    const reviewsTrack = document.getElementById('reviewsTrack');
-    const reviewSlides = Array.from(reviewsTrack.querySelectorAll('.review-slide'));
-    const reviewsDotsContainer = document.getElementById('reviewsDots');
-    const prevReviewBtn = document.getElementById('prevReviewBtn');
-    const nextReviewBtn = document.getElementById('nextReviewBtn');
-    const reviewsCarousel = document.getElementById('reviewsCarousel');
-
-    const SLIDE_INTERVAL_MS = 5500;
-    let currentReviewIndex = 0;
-    let reviewTimer = null;
-
-    reviewSlides.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'review-dot' + (idx === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', `Go to review ${idx + 1}`);
-      dot.addEventListener('click', () => {
-        goToReview(idx);
-        restartReviewTimer();
-      });
-      reviewsDotsContainer.appendChild(dot);
-    });
-
-    const reviewDots = Array.from(reviewsDotsContainer.querySelectorAll('.review-dot'));
-    const progressBars = reviewSlides.map((slide) => slide.querySelector('.review-progress-bar'));
-
-    function resetProgressBars() {
-      progressBars.forEach((bar) => {
-        if (bar) {
-          bar.style.transition = 'none';
-          bar.style.width = '0%';
-        }
-      });
-    }
-
-    function animateActiveProgressBar(index) {
-      resetProgressBars();
-      const activeBar = progressBars[index];
-      if (activeBar) {
-        void activeBar.offsetWidth;
-        activeBar.style.transition = `width ${SLIDE_INTERVAL_MS}ms linear`;
-        activeBar.style.width = '100%';
-      }
-    }
-
-    function goToReview(index) {
-      currentReviewIndex = (index + reviewSlides.length) % reviewSlides.length;
-      reviewsTrack.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
-
-      reviewDots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentReviewIndex);
-      });
-
-      animateActiveProgressBar(currentReviewIndex);
-    }
-
-    function nextReview() {
-      goToReview(currentReviewIndex + 1);
-    }
-
-    function prevReview() {
-      goToReview(currentReviewIndex - 1);
-    }
-
-    function startReviewTimer() {
-      stopReviewTimer();
-      animateActiveProgressBar(currentReviewIndex);
-      reviewTimer = setInterval(nextReview, SLIDE_INTERVAL_MS);
-    }
-
-    function stopReviewTimer() {
-      if (reviewTimer) {
-        clearInterval(reviewTimer);
-        reviewTimer = null;
-      }
-    }
-
-    function restartReviewTimer() {
-      startReviewTimer();
-    }
-
-    nextReviewBtn.addEventListener('click', () => {
-      nextReview();
-      restartReviewTimer();
-    });
-
-    prevReviewBtn.addEventListener('click', () => {
-      prevReview();
-      restartReviewTimer();
-    });
-
-    reviewsCarousel.addEventListener('mouseenter', () => {
-      stopReviewTimer();
-      const activeBar = progressBars[currentReviewIndex];
-      if (activeBar) {
-        activeBar.style.transition = 'none';
-      }
-    });
-
-    reviewsCarousel.addEventListener('mouseleave', () => {
-      startReviewTimer();
-    });
-
-    goToReview(0);
-    startReviewTimer();
-
-    // =========================================================================
-    // 8. Project Enquiry Form — Strict Email, Phone & Required Field Validation
-    //    + Direct Delivery to mvapscompany@gmail.com
+    // 3. Strict Email Validation + Warning Popup + Direct Delivery to
+    //    mvapscompany@gmail.com
     // =========================================================================
     const RECEIVER_EMAIL = 'mvapscompany@gmail.com';
 
+    const contactForm = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const emailErrorMsg = document.getElementById('emailErrorMsg');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    const emailWarningModal = document.getElementById('emailWarningModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    // Strict email format validator: requires local@domain.tld (at least 2-letter TLD, no "..")
     function isValidEmailFormat(value) {
       const trimmed = value.trim();
-      if (!trimmed || trimmed.includes('..')) return false;
-      return /^[a-zA-Z0-9_%+-]+(\.[a-zA-Z0-9_%+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,12}$/.test(trimmed);
+      if (!trimmed || trimmed.includes('..')) {
+        return false;
+      }
+      const strictEmailRegex =
+        /^[a-zA-Z0-9_%+-]+(\.[a-zA-Z0-9_%+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,12}$/;
+      return strictEmailRegex.test(trimmed);
     }
 
-    function isValidPhoneFormat(value) {
-      const trimmed = value.trim();
-      if (!trimmed) return false;
-      if (!/^\+?[\d\s()-]{10,18}$/.test(trimmed)) return false;
-      const digits = trimmed.replace(/\D/g, '');
-      // Reject fake repeated digits like 9999999999 or 0000000000
-      if (/^(\d)\1+$/.test(digits)) return false;
-      if (digits.length === 10 && /^[6-9]\d{9}$/.test(digits)) return true;
-      if (digits.length === 11 && /^0[6-9]\d{9}$/.test(digits)) return true;
-      if (digits.length === 12 && /^91[6-9]\d{9}$/.test(digits)) return true;
-      if (trimmed.startsWith('+') && digits.length >= 10 && digits.length <= 15) return true;
-      return false;
+    function showEmailWarningPopup() {
+      emailInput.classList.add('input-invalid', 'shake');
+      emailErrorMsg.classList.add('visible');
+      emailWarningModal.classList.add('active');
+      setTimeout(() => {
+        emailInput.classList.remove('shake');
+      }, 450);
     }
 
-    function showValidationPopup(title, descHtml, inputEl, errorEl) {
-      modalBox.classList.remove('info-mode');
-      modalIcon.style.display = 'inline-flex';
-      inputEl.classList.add('input-invalid', 'shake');
-      if (errorEl) errorEl.classList.add('visible');
-      modalTitle.textContent = title;
-      modalDesc.innerHTML = descHtml;
-      fieldToFocus = inputEl;
-      popupModal.classList.add('active');
-      setTimeout(() => inputEl.classList.remove('shake'), 450);
+    function clearEmailError() {
+      emailInput.classList.remove('input-invalid');
+      emailErrorMsg.classList.remove('visible');
     }
 
     closeModalBtn.addEventListener('click', () => {
-      popupModal.classList.remove('active');
-      if (fieldToFocus) fieldToFocus.focus();
+      emailWarningModal.classList.remove('active');
+      emailInput.focus();
     });
 
-    popupModal.addEventListener('click', (e) => {
-      if (e.target === popupModal) {
-        popupModal.classList.remove('active');
-        if (fieldToFocus) fieldToFocus.focus();
+    emailWarningModal.addEventListener('click', (e) => {
+      if (e.target === emailWarningModal) {
+        emailWarningModal.classList.remove('active');
+        emailInput.focus();
       }
     });
 
-    const enquiryForm = document.getElementById('enquiryForm');
-    const fullNameInput = document.getElementById('fullName');
-    const emailInput = document.getElementById('email');
-    const phoneInput = document.getElementById('phone');
-    const customerTypeSelect = document.getElementById('customerType');
-    const deliveryDateInput = document.getElementById('deliveryDate');
-    const descriptionInput = document.getElementById('description');
-
-    const nameErrorMsg = document.getElementById('nameErrorMsg');
-    const emailErrorMsg = document.getElementById('emailErrorMsg');
-    const phoneErrorMsg = document.getElementById('phoneErrorMsg');
-    const enquirySubmitBtn = document.getElementById('enquirySubmitBtn');
-    const enquiryStatus = document.getElementById('enquiryStatus');
-
-    // Live error clearing when user enters valid details
-    fullNameInput.addEventListener('input', () => {
-      if (fullNameInput.value.trim().length >= 2) {
-        fullNameInput.classList.remove('input-invalid');
-        nameErrorMsg.classList.remove('visible');
-      }
-    });
-
+    // Live check as the customer types or leaves the email input
     emailInput.addEventListener('input', () => {
       if (isValidEmailFormat(emailInput.value)) {
-        emailInput.classList.remove('input-invalid');
-        emailErrorMsg.classList.remove('visible');
+        clearEmailError();
       }
     });
 
@@ -3677,178 +2470,68 @@
       }
     });
 
-    phoneInput.addEventListener('input', () => {
-      if (isValidPhoneFormat(phoneInput.value)) {
-        phoneInput.classList.remove('input-invalid');
-        phoneErrorMsg.classList.remove('visible');
-      }
-    });
-
-    phoneInput.addEventListener('blur', () => {
-      if (phoneInput.value.trim() !== '' && !isValidPhoneFormat(phoneInput.value)) {
-        phoneInput.classList.add('input-invalid');
-        phoneErrorMsg.classList.add('visible');
-      }
-    });
-
-    [customerTypeSelect, serviceSelect, projectTitleInput, deliveryDateInput, descriptionInput].forEach((el) => {
-      el.addEventListener('input', () => el.classList.remove('input-invalid'));
-      el.addEventListener('change', () => el.classList.remove('input-invalid'));
-    });
-
-    enquiryForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // 1. Validate Full Name
-      if (fullNameInput.value.trim().length < 2) {
-        showValidationPopup(
-          'Full Name Required',
-          'Please enter your full name so our team knows who to address.',
-          fullNameInput,
-          nameErrorMsg
-        );
+      // 1. Validate required name & message
+      if (!nameInput.value.trim()) {
+        nameInput.focus();
         return;
       }
 
-      // 2. Validate Email Format Strictly
+      // 2. Strict Email Check: trigger warning popup if invalid
       if (!isValidEmailFormat(emailInput.value)) {
-        showValidationPopup(
-          'Invalid Email Address',
-          'Please enter a valid email address format (for example, <strong>yourname@gmail.com</strong> or <strong>name@company.com</strong>) so we can reply to your project enquiry.',
-          emailInput,
-          emailErrorMsg
-        );
+        showEmailWarningPopup();
         return;
       }
 
-      // 3. Validate Phone / WhatsApp Number Strictly
-      if (!isValidPhoneFormat(phoneInput.value)) {
-        showValidationPopup(
-          'Invalid Phone / WhatsApp Number',
-          'Please enter a valid 10-digit mobile number (for example, <strong>9876543210</strong> or <strong>+91 98765 43210</strong>) without letters or invalid characters.',
-          phoneInput,
-          phoneErrorMsg
-        );
+      clearEmailError();
+
+      if (!messageInput.value.trim()) {
+        messageInput.focus();
         return;
       }
 
-      // 4. Validate Remaining Required Project Fields
-      if (!customerTypeSelect.value) {
-        showValidationPopup(
-          'Selection Required',
-          'Please select an option under <strong>"I am a…"</strong> (Student, Professional, Startup, or Business).',
-          customerTypeSelect,
-          null
-        );
-        return;
-      }
-
-      if (!serviceSelect.value) {
-        showValidationPopup(
-          'Service Required',
-          'Please choose the <strong>Service required</strong> for your project.',
-          serviceSelect,
-          null
-        );
-        return;
-      }
-
-      if (!projectTitleInput.value.trim()) {
-        showValidationPopup(
-          'Project Title Required',
-          'Please enter a short <strong>Project title</strong> for what you are building.',
-          projectTitleInput,
-          null
-        );
-        return;
-      }
-
-      if (!deliveryDateInput.value) {
-        showValidationPopup(
-          'Expected Delivery Date Required',
-          'Please select your <strong>Expected delivery date</strong>.',
-          deliveryDateInput,
-          null
-        );
-        return;
-      }
-
-      if (!descriptionInput.value.trim()) {
-        showValidationPopup(
-          'Project Description Required',
-          'Please share a brief <strong>Project description</strong> so we can understand your requirements.',
-          descriptionInput,
-          null
-        );
-        return;
-      }
-
-      // Generate Unique Reference ID for the Enquiry
-      const refId = 'PN-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
-      document.getElementById('enquiryRefId').value = refId;
-      document.getElementById('enquirySubject').value =
-        `New Project Enquiry [${refId}] — ${projectTitleInput.value.trim()}`;
-
-      // Local file:/// fallback so local testing never shows FormSubmit's web-server error
-      if (window.location.protocol === 'file:') {
-        const subject = encodeURIComponent(`Project Nest Enquiry [${refId}]: ${projectTitleInput.value.trim()}`);
-        const body = encodeURIComponent(
-          `Reference ID: ${refId}\n` +
-          `Full Name: ${fullNameInput.value.trim()}\n` +
-          `Email: ${emailInput.value.trim()}\n` +
-          `Phone/WhatsApp: ${phoneInput.value.trim()}\n` +
-          `I am a: ${customerTypeSelect.value}\n` +
-          `Service Required: ${serviceSelect.value}\n` +
-          `Project Title: ${projectTitleInput.value.trim()}\n` +
-          `Budget Range: ${document.getElementById('budget').value}\n` +
-          `Expected Delivery Date: ${deliveryDateInput.value}\n` +
-          `Reference Files/Links: ${document.getElementById('referenceLink').value.trim()}\n` +
-          `Additional Requirements: ${document.getElementById('additional').value.trim()}\n\n` +
-          `Project Description:\n${descriptionInput.value.trim()}`
-        );
-        window.location.href = `mailto:${RECEIVER_EMAIL}?subject=${subject}&body=${body}`;
-        enquiryStatus.textContent =
-          `Enquiry Reference ${refId} created! Opening your mail client to send to mvapscompany@gmail.com. (Submits automatically when hosted on Render!)`;
-        enquiryStatus.className = 'form-status success';
-        return;
-      }
-
-      const formData = new FormData(enquiryForm);
+      const formData = new FormData(contactForm);
       const customerEmail = emailInput.value.trim();
       formData.set('email', customerEmail);
-      formData.append('Customer_Email', customerEmail);
       formData.append('_replyto', customerEmail);
 
-      enquirySubmitBtn.disabled = true;
-      enquirySubmitBtn.textContent = 'Submitting Project Enquiry...';
-      enquiryStatus.className = 'form-status';
-      enquiryStatus.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending Inquiry...';
+      formStatus.className = 'form-status';
+      formStatus.style.display = 'none';
 
       try {
         const response = await fetch(`https://formsubmit.co/ajax/${RECEIVER_EMAIL}`, {
           method: 'POST',
-          headers: { Accept: 'application/json' },
+          headers: {
+            Accept: 'application/json',
+          },
           body: formData,
         });
+
         const result = await response.json();
 
         if (response.ok && (result.success === 'true' || result.success === true)) {
-          enquiryStatus.textContent =
-            `Thank you! Your project enquiry (Ref: ${refId}) has been sent directly to Project Nest (mvapscompany@gmail.com).`;
-          enquiryStatus.className = 'form-status success';
-          enquiryForm.reset();
+          formStatus.textContent =
+            'Thank you! Your inquiry has been sent directly to MVAPS & Company. Our team will get back to you shortly.';
+          formStatus.className = 'form-status success';
+          contactForm.reset();
         } else {
-          enquiryForm.submit();
+          throw new Error(result.message || 'Submission could not be completed.');
         }
       } catch (err) {
-        enquiryForm.submit();
+        // Fallback standard POST submission (important for the first-time activation email)
+        formStatus.textContent =
+          'Thank you! Completing your inquiry submission...';
+        formStatus.className = 'form-status success';
+        contactForm.submit();
       } finally {
-        enquirySubmitBtn.disabled = false;
-        enquirySubmitBtn.textContent = 'Submit Project Enquiry';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Inquiry';
       }
     });
   </script>
 </body>
 </html>
-
-
