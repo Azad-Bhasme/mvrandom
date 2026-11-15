@@ -9,7 +9,6 @@
     content="MVAPS & Company is a connected business and technology ecosystem uniting MVAPS Solutions (IT & AI), Solveitly (EdTech), and Infos Digital (Media)."
   />
 
- 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -1216,7 +1215,7 @@
       box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
     }
 
-    /* Invalid Email Input State */
+    /* Invalid Input State */
     .form-group input.input-invalid {
       border-color: var(--danger) !important;
       background-color: #fff5f5 !important;
@@ -1259,7 +1258,7 @@
     }
 
     /* ==========================================================================
-       Warning Popup Modal for Invalid Email
+       Warning Popup Modal for Invalid Email or Phone Number
        ========================================================================== */
     .modal-overlay {
       position: fixed;
@@ -1494,7 +1493,14 @@
         </p>
         <div class="btn-row">
           <a href="#ecosystem" class="btn btn-gold">Explore Our Ecosystem</a>
-          <a href="#solutions" class="btn btn-outline-light">MVAPS Solutions</a>
+          <a
+            href="https://project-nest-ai.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-light"
+          >
+            Launch Project Nest AI ↗
+          </a>
           <a
             href="https://snapdocsaio.onrender.com/"
             target="_blank"
@@ -1795,7 +1801,7 @@
         </div>
       </div>
 
-      <!-- Project Nest AI Spotlight -->
+      <!-- Project Nest AI Spotlight (Direct Clickable Button to Project Nest AI Website) -->
       <div class="project-nest-panel reveal">
         <div class="pn-top">
           <div>
@@ -1806,7 +1812,17 @@
               intelligent automation, and web and mobile solutions—helping students, startups, and
               enterprises turn ambitious ideas into working digital products.
             </p>
-            <a href="#contact" class="btn btn-gold">Start a Project with Us</a>
+            <div class="btn-row">
+              <a
+                href="https://project-nest-ai.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-gold"
+              >
+                Launch Project Nest AI ↗
+              </a>
+              <a href="#contact" class="btn btn-outline-light">Discuss a Project</a>
+            </div>
           </div>
 
           <div class="pn-tracks">
@@ -1845,7 +1861,7 @@
       </div>
 
       <div class="products-grid">
-       
+
         <div class="product-card featured reveal">
           <div>
             <img
@@ -1910,12 +1926,12 @@
           </div>
         </div>
 
-        <!-- Project Nest AI -->
+        <!-- Project Nest AI (Direct Clickable Button to https://project-nest-ai.onrender.com/) -->
         <div class="product-card reveal delay-2">
           <div>
             <div class="product-meta">
               <span class="status-badge badge-light-live">
-                <span class="blink-dot"></span>Active Platform
+                <span class="blink-dot"></span>Live Platform
               </span>
               <span class="card-tag" style="margin: 0;">MVAPS Solutions</span>
             </div>
@@ -1931,7 +1947,14 @@
             </ul>
           </div>
           <div>
-            <a href="#contact" class="btn btn-navy">Request Project Delivery</a>
+            <a
+              href="https://project-nest-ai.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-navy"
+            >
+              Launch Project Nest AI ↗
+            </a>
           </div>
         </div>
 
@@ -2152,6 +2175,14 @@
 
           <div class="btn-row">
             <a
+              href="https://project-nest-ai.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-gold"
+            >
+              Launch Project Nest AI ↗
+            </a>
+            <a
               href="https://snapdocsaio.onrender.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -2211,13 +2242,18 @@
 
           <div class="form-row-two">
             <div class="form-group">
-              <label for="phone">Phone / WhatsApp Number</label>
+              <label for="phone">Phone / WhatsApp Number *</label>
               <input
                 type="tel"
                 id="phone"
                 name="Phone_Number"
-                placeholder="+91 XXXXX XXXXX"
+                placeholder="+91 98765 43210"
+                autocomplete="tel"
+                required
               />
+              <span id="phoneErrorMsg" class="field-error-msg">
+                ⚠ Please enter a valid 10-digit mobile number (e.g., +91 9876543210).
+              </span>
             </div>
 
             <div class="form-group">
@@ -2271,10 +2307,10 @@
     </div>
   </section>
 
-  <!-- Invalid Email Warning Popup Modal -->
+  <!-- Invalid Email / Phone Warning Popup Modal -->
   <div
     class="modal-overlay"
-    id="emailWarningModal"
+    id="warningModal"
     role="alertdialog"
     aria-modal="true"
     aria-labelledby="modalTitle"
@@ -2282,14 +2318,12 @@
   >
     <div class="modal-box">
       <div class="modal-icon">!</div>
-      <h4 id="modalTitle">Invalid Email Address</h4>
+      <h4 id="modalTitle">Invalid Input</h4>
       <p id="modalDesc">
-        Please enter a valid email address format (for example,
-        <strong>yourname@gmail.com</strong> or <strong>name@company.com</strong>) so our team can
-        reply to your inquiry.
+        Please enter valid contact details so our team can reply to your inquiry.
       </p>
       <button type="button" id="closeModalBtn" class="btn btn-navy" style="width: 100%;">
-        OK, Enter Valid Email
+        OK, Fix Details
       </button>
     </div>
   </div>
@@ -2338,7 +2372,15 @@
         <div class="footer-col">
           <h4>Products &amp; Delivery</h4>
           <ul>
-            <li><a href="#solutions">Project Nest AI</a></li>
+            <li>
+              <a
+                href="https://project-nest-ai.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Launch Project Nest AI ↗
+              </a>
+            </li>
             <li>
               <a
                 href="https://snapdocsaio.onrender.com/"
@@ -2388,8 +2430,6 @@
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
           } else {
-            // Reset when element leaves viewport so scrolling back up re-plays
-            // the slow, smooth reveal animation.
             entry.target.classList.remove('is-visible');
           }
         });
@@ -2403,7 +2443,7 @@
     revealElements.forEach((el) => revealObserver.observe(el));
 
     // =========================================================================
-    // 3. Strict Email Validation + Warning Popup + Direct Delivery to
+    // 3. Strict Email & Phone Validation + Warning Popup + Direct Delivery to
     //    mvapscompany@gmail.com
     // =========================================================================
     const RECEIVER_EMAIL = 'mvapscompany@gmail.com';
@@ -2411,15 +2451,19 @@
     const contactForm = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
     const messageInput = document.getElementById('message');
     const emailErrorMsg = document.getElementById('emailErrorMsg');
+    const phoneErrorMsg = document.getElementById('phoneErrorMsg');
     const submitBtn = document.getElementById('submitBtn');
     const formStatus = document.getElementById('formStatus');
 
-    const emailWarningModal = document.getElementById('emailWarningModal');
+    const warningModal = document.getElementById('warningModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
     const closeModalBtn = document.getElementById('closeModalBtn');
+    let fieldToFocus = null;
 
-    // Strict email format validator: requires local@domain.tld (at least 2-letter TLD, no "..")
     function isValidEmailFormat(value) {
       const trimmed = value.trim();
       if (!trimmed || trimmed.includes('..')) {
@@ -2430,36 +2474,47 @@
       return strictEmailRegex.test(trimmed);
     }
 
-    function showEmailWarningPopup() {
-      emailInput.classList.add('input-invalid', 'shake');
-      emailErrorMsg.classList.add('visible');
-      emailWarningModal.classList.add('active');
+    function isValidPhoneFormat(value) {
+      const trimmed = value.trim();
+      if (!trimmed) return false;
+      if (!/^\+?[\d\s()-]{10,18}$/.test(trimmed)) return false;
+      const digits = trimmed.replace(/\D/g, '');
+      if (/^(\d)\1+$/.test(digits)) return false;
+      if (digits.length === 10 && /^[6-9]\d{9}$/.test(digits)) return true;
+      if (digits.length === 11 && /^0[6-9]\d{9}$/.test(digits)) return true;
+      if (digits.length === 12 && /^91[6-9]\d{9}$/.test(digits)) return true;
+      if (trimmed.startsWith('+') && digits.length >= 10 && digits.length <= 15) return true;
+      return false;
+    }
+
+    function showWarningPopup(title, descHtml, inputEl, errorEl) {
+      inputEl.classList.add('input-invalid', 'shake');
+      errorEl.classList.add('visible');
+      modalTitle.textContent = title;
+      modalDesc.innerHTML = descHtml;
+      fieldToFocus = inputEl;
+      warningModal.classList.add('active');
       setTimeout(() => {
-        emailInput.classList.remove('shake');
+        inputEl.classList.remove('shake');
       }, 450);
     }
 
-    function clearEmailError() {
-      emailInput.classList.remove('input-invalid');
-      emailErrorMsg.classList.remove('visible');
-    }
-
     closeModalBtn.addEventListener('click', () => {
-      emailWarningModal.classList.remove('active');
-      emailInput.focus();
+      warningModal.classList.remove('active');
+      if (fieldToFocus) fieldToFocus.focus();
     });
 
-    emailWarningModal.addEventListener('click', (e) => {
-      if (e.target === emailWarningModal) {
-        emailWarningModal.classList.remove('active');
-        emailInput.focus();
+    warningModal.addEventListener('click', (e) => {
+      if (e.target === warningModal) {
+        warningModal.classList.remove('active');
+        if (fieldToFocus) fieldToFocus.focus();
       }
     });
 
-    // Live check as the customer types or leaves the email input
     emailInput.addEventListener('input', () => {
       if (isValidEmailFormat(emailInput.value)) {
-        clearEmailError();
+        emailInput.classList.remove('input-invalid');
+        emailErrorMsg.classList.remove('visible');
       }
     });
 
@@ -2470,25 +2525,67 @@
       }
     });
 
+    phoneInput.addEventListener('input', () => {
+      if (isValidPhoneFormat(phoneInput.value)) {
+        phoneInput.classList.remove('input-invalid');
+        phoneErrorMsg.classList.remove('visible');
+      }
+    });
+
+    phoneInput.addEventListener('blur', () => {
+      if (phoneInput.value.trim() !== '' && !isValidPhoneFormat(phoneInput.value)) {
+        phoneInput.classList.add('input-invalid');
+        phoneErrorMsg.classList.add('visible');
+      }
+    });
+
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // 1. Validate required name & message
       if (!nameInput.value.trim()) {
         nameInput.focus();
         return;
       }
 
-      // 2. Strict Email Check: trigger warning popup if invalid
       if (!isValidEmailFormat(emailInput.value)) {
-        showEmailWarningPopup();
+        showWarningPopup(
+          'Invalid Email Address',
+          'Please enter a valid email address format (for example, <strong>yourname@gmail.com</strong> or <strong>name@company.com</strong>) so our team can reply to your inquiry.',
+          emailInput,
+          emailErrorMsg
+        );
         return;
       }
 
-      clearEmailError();
+      if (!isValidPhoneFormat(phoneInput.value)) {
+        showWarningPopup(
+          'Invalid Phone / WhatsApp Number',
+          'Please enter a valid 10-digit mobile number (for example, <strong>9876543210</strong> or <strong>+91 98765 43210</strong>) without letters or invalid characters.',
+          phoneInput,
+          phoneErrorMsg
+        );
+        return;
+      }
 
       if (!messageInput.value.trim()) {
         messageInput.focus();
+        return;
+      }
+
+      if (window.location.protocol === 'file:') {
+        const subject = encodeURIComponent('New Customer Inquiry — MVAPS & Company');
+        const body = encodeURIComponent(
+          `Customer Name: ${nameInput.value.trim()}\n` +
+          `Customer Email: ${emailInput.value.trim()}\n` +
+          `Phone / WhatsApp: ${phoneInput.value.trim()}\n` +
+          `Organization: ${document.getElementById('organization').value.trim()}\n` +
+          `Inquiry Area: ${document.getElementById('inquiry').value}\n\n` +
+          `Message:\n${messageInput.value.trim()}`
+        );
+        window.location.href = `mailto:${RECEIVER_EMAIL}?subject=${subject}&body=${body}`;
+        formStatus.textContent =
+          'Local file mode detected: Opening your email client to send to mvapscompany@gmail.com. (Submits automatically when hosted on Render!)';
+        formStatus.className = 'form-status success';
         return;
       }
 
@@ -2522,7 +2619,6 @@
           throw new Error(result.message || 'Submission could not be completed.');
         }
       } catch (err) {
-        // Fallback standard POST submission (important for the first-time activation email)
         formStatus.textContent =
           'Thank you! Completing your inquiry submission...';
         formStatus.className = 'form-status success';
@@ -2535,3 +2631,4 @@
   </script>
 </body>
 </html>
+
